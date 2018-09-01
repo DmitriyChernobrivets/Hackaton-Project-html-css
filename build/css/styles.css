@@ -189,16 +189,21 @@ input {
   overflow: visible;
 }
 
+
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 13px;
+  margin: 0;
+  padding: 0;
 }
 
 a {
   text-decoration: none;
   color: #000;
 }
+
 
 /**
    * Remove the inheritance of text transform in Edge, Firefox, and IE.
@@ -385,6 +390,12 @@ template {
   display: none;
 }
 
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
@@ -397,13 +408,12 @@ template {
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.woff2") format("woff2");
-}
 
-@font-face {
   font-family: 'Roboto-Bold';
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.woff2") format("woff2");
+
 }
 
 @font-face {
@@ -420,20 +430,162 @@ template {
   src: url("../fonts/CormorantUnicase-Bold.woff") format("woff"), url("../fonts/CormorantUnicase-Bold.woff2") format("woff2");
 }
 
-.wrapper {
-  max-width: 1600px;
-  margin: 0 auto;
+
+.footer {
+  background-color: #efefef;
+  color: #333333;
 }
 
+.footer .block {
+  padding: 105px 0 77px;
+  margin: auto;
+=======
 .main {
   padding: 60px 0 110px 0;
 }
 
 .flex {
+
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+
+}
+
+.footer .block .footer__block1 {
+  margin-right: 150px;
+}
+
+.footer .block .footer__block1 .footer__title {
+  font-size: 28px;
+  font-family: "CormorantUnicase-Regular", Arial, sans-serif;
+  text-transform: uppercase;
+  margin: 0px 0px 42px;
+}
+
+.footer .block .footer__block1 .footer__info-production {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 12px;
+}
+
+.footer .block .footer__block1 .swimsuit {
+  padding-bottom: 15px;
+}
+
+.footer .block .footer__block1 .fitness {
+  padding-bottom: 20px;
+}
+
+.footer .block .footer__block1 .footer__info-contact {
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: bold;
+  padding-bottom: 12px;
+}
+
+.footer .block .footer__block1 .footer__info-contact:last-child {
+  padding-bottom: 0;
+}
+
+.footer .block .footer__block2 {
+  margin-right: 178px;
+}
+
+.footer .block .footer__block2 .footer__subtitle-about {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 18px;
+  margin: 5px 0 43px;
+}
+
+.footer .block .footer__block2 .footer__about-list {
+  list-style: none;
+}
+
+.footer .block .footer__block2 .footer__about-link {
+  color: #333333;
+}
+
+.footer .block .footer__block2 .footer__about-item {
+  margin-bottom: 12px;
+}
+
+.footer .block .footer__block2 .footer__about-link:hover {
+  text-decoration: underline;
+}
+
+.footer .block .footer__block3 {
+  margin-right: 128px;
+}
+
+.footer .block .footer__block3 .footer__questions-subtitle {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 18px;
+  margin: 5px 0 43px;
+}
+
+.footer .block .footer__block3 .footer__questions-list {
+  list-style: none;
+}
+
+.footer .block .footer__block3 .footer__questions-link {
+  color: #333333;
+}
+
+.footer .block .footer__block3 .footer__questions-item {
+  margin-bottom: 12px;
+}
+
+.footer .block .footer__block3 .footer__questions-link:hover {
+  text-decoration: underline;
+}
+
+.footer .block .footer__block4 {
+  margin-right: 116px;
+}
+
+.footer .block .footer__block4 .footer__join-subtitle {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 18px;
+  margin: 5px 0 43px;
+}
+
+.footer .block .footer__block4 .footer__join-button {
+  background-image: url(../img/instagram-logo.png);
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  margin-right: 18px;
+}
+
+.footer .block .footer__block5 .footer__news-subtitle {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 18px;
+  margin: 5px 0 43px;
+}
+
+.footer .block .footer__block5 .footer__news-sale {
+  padding-bottom: 15px;
+}
+
+.footer .block .footer__block5 .footer__news-sale:last-child {
+  padding-bottom: 25px;
+}
+
+.footer .block .footer__block5 .footer__news-button {
+  width: 200px;
+  height: 45px;
+  background-color: #333333;
+  border: none;
+  color: #ffffff;
+}
+
+.footer .block .footer__block5 .footer__news-button::before {
+  content: "";
+  display: block;
+=======
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -571,4 +723,5 @@ template {
   -webkit-border-radius: 60%;
   border-radius: 60%;
   background-color: #ffffff;
+
 }
