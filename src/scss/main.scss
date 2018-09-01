@@ -1,4 +1,119 @@
 .wrapper {
-    max-width: 1600px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
+.main {
+  padding: 60px 0 110px 0;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.content-box:not(:nth-child(n+8)) {
+  margin-bottom: 60px;
+}
+.content-box {
+  width: 380px;
+  min-height: 100px;
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__img-holder {
+    position: relative;
+    margin-bottom: 22px;
+
+    &:hover .content-box__learn-more {
+      opacity: 1;
+      transition: .2s linear;
+    }
+  }
+
+  &__learn-txt {
+    font-size: $font-size-very-small;
+    
+    border-bottom: 2px solid black;
+    font-family: $font-family-Roboto-Bold;
+    transition: .2s linear;
+    &:hover {
+      color: $font-color-red;
+      transition: .2s linear;
+      border-bottom: 2px solid $font-color-red;
+    }
+    
+  }
+
+  &__collection {
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $font-family-Roboto;
+  }
+
+  &__collection-name {
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: $font-family-Roboto;
+    font-size: $font-size-small;
+
+    >:last-child {
+      border-left: 1px solid $footer-background;
+      padding-left: 4px;
+    }
+  }
+
+  &__collection-price {
+    text-align: center;
+
+    &__red {
+      color: $font-color-red;
+    }
+
+    &__throught {
+      text-decoration: line-through;
+      margin-right: 12px;
+    }
+  }
+
+  &__learn-more {
+    position: absolute;
+    transform: translate(0, -100%);
+    background-color: $main-learn-bg;
+    display: flex;
+    justify-content: space-between;
+    padding: 13px;
+    width: 100%;
+    opacity: 0;
+    transition: .2s linear;
+
+    .btn {
+      border-radius: 20%;
+      height: 20px;
+      width: 20px;
+      cursor: pointer;
+      transition: .2s linear;
+      
+      &:hover {
+        fill: $font-color-red;
+        transition: .2s linear;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__sale {
+    position: absolute;
+    color: $font-color-red;
+    right: 25px;
+    top: 25px;
+    padding: 30px 20px;
+    border-radius: 60%;
+    background-color: $font-color-white;
+  }
+}
