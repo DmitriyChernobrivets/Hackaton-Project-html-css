@@ -189,6 +189,22 @@ input {
   overflow: visible;
 }
 
+
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+
 /**
    * Remove the inheritance of text transform in Edge, Firefox, and IE.
    * 1. Remove the inheritance of text transform in Firefox.
@@ -374,48 +390,10 @@ template {
   display: none;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 13px;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: 'Roboto-Medium';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: 'CormorantUnicase-Regular';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/CormorantUnicase-Regular.woff") format("woff"), url("../fonts/CormorantUnicase-Regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: 'CormorantUnicase-Bold';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/CormorantUnicase-Bold.woff") format("woff"), url("../fonts/CormorantUnicase-Bold.woff2") format("woff2");
-}
 
 .wrapper {
   max-width: 1600px;
+  margin: 0 auto;
 }
 
 @font-face {
@@ -430,6 +408,12 @@ a {
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.woff2") format("woff2");
+
+  font-family: 'Roboto-Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.woff2") format("woff2");
+
 }
 
 @font-face {
@@ -445,23 +429,28 @@ a {
   font-weight: 400;
   src: url("../fonts/CormorantUnicase-Bold.woff") format("woff"), url("../fonts/CormorantUnicase-Bold.woff2") format("woff2");
 }
+
 
 .footer {
   background-color: #efefef;
   color: #333333;
 }
 
-.footer .wrapper {
-  width: 1600px;
-}
-
 .footer .block {
   padding: 105px 0 77px;
   margin: auto;
+=======
+.main {
+  padding: 60px 0 110px 0;
+}
+
+.flex {
+
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+
 }
 
 .footer .block .footer__block1 {
@@ -596,4 +585,143 @@ a {
 .footer .block .footer__block5 .footer__news-button::before {
   content: "";
   display: block;
+=======
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.content-box:not(:nth-child(n+8)) {
+  margin-bottom: 60px;
+}
+
+.content-box {
+  width: 380px;
+  min-height: 100px;
+}
+
+.content-box__img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content-box__img-holder {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.content-box__img-holder:hover .content-box__learn-more {
+  opacity: 1;
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.content-box__learn-txt {
+  font-size: 12px;
+  border-bottom: 2px solid black;
+  font-family: "Roboto-Bold", Arial, sans-serif;
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.content-box__learn-txt:hover {
+  color: #e73331;
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+  border-bottom: 2px solid #e73331;
+}
+
+.content-box__collection {
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.content-box__collection-name {
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 13px;
+}
+
+.content-box__collection-name > :last-child {
+  border-left: 1px solid #efefef;
+  padding-left: 4px;
+}
+
+.content-box__collection-price {
+  text-align: center;
+}
+
+.content-box__collection-price__red {
+  color: #e73331;
+}
+
+.content-box__collection-price__throught {
+  text-decoration: line-through;
+  margin-right: 12px;
+}
+
+.content-box__learn-more {
+  position: absolute;
+  -webkit-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 13px;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.content-box__learn-more .btn {
+  -webkit-border-radius: 20%;
+  border-radius: 20%;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.content-box__learn-more .btn:hover {
+  fill: #e73331;
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.content-box__sale {
+  position: absolute;
+  color: #e73331;
+  right: 25px;
+  top: 25px;
+  padding: 30px 20px;
+  -webkit-border-radius: 60%;
+  border-radius: 60%;
+  background-color: #ffffff;
+
 }
