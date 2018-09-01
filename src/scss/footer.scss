@@ -1,0 +1,120 @@
+.footer {
+  background-color: $footer-background;
+  color: $footer-black;
+  .wrapper {
+    width: 1600px;
+  }
+  .block {
+    padding: 105px 0 77px;
+    margin: auto;
+    display: flex;
+    .footer__block1 {
+      margin-right: 150px;
+      .footer__title {
+        font-size: $font-size-large;
+        font-family: $font-family-CormorantUnicase-Regular;
+        text-transform: uppercase;
+        margin: 0px 0px 42px;
+      }
+      .footer__info-production {
+        font-family: $font-family-Roboto;
+        font-size: 12px;
+      }
+      .swimsuit {
+        padding-bottom: 15px;
+      }
+      .fitness {
+        padding-bottom: 20px;
+      }
+      .footer__info-contact {
+        font-family: $font-family-Roboto;
+        font-weight: bold;
+        padding-bottom: 12px;
+      }
+      .footer__info-contact:last-child {
+        padding-bottom: 0;
+      }
+    }
+    .footer__block2 {
+      margin-right: 178px;
+      .footer__subtitle-about {
+        font-family: $font-family-Roboto;
+        font-size: 18px;
+        margin: 5px 0 43px;
+      }
+      .footer__about-list {
+        list-style: none;
+      }
+      .footer__about-link {
+        color: $footer-black;
+      }
+      .footer__about-item {
+        margin-bottom: 12px;
+      }
+      .footer__about-link:hover {
+        text-decoration: underline;
+      }
+    }
+    .footer__block3 {
+      margin-right: 128px;
+      .footer__questions-subtitle {
+        font-family: $font-family-Roboto;
+        font-size: 18px;
+        margin: 5px 0 43px;
+      }
+      .footer__questions-list {
+        list-style: none;
+      }
+      .footer__questions-link {
+        color: $footer-black;
+      }
+      .footer__questions-item {
+        margin-bottom: 12px;
+      }
+      .footer__questions-link:hover {
+        text-decoration: underline;
+      }
+    }
+    .footer__block4 {
+      margin-right: 116px;
+      .footer__join-subtitle {
+        font-family: $font-family-Roboto;
+        font-size: 18px;
+        margin: 5px 0 43px;
+      }
+      .footer__join-button {
+        background-image: url(../img/instagram-logo.png);
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        margin-right: 18px;
+      }
+    }
+    .footer__block5 {
+      .footer__news-subtitle {
+        font-family: $font-family-Roboto;
+        font-size: 18px;
+        margin: 5px 0 43px;
+      }
+      .footer__news-sale {
+        padding-bottom: 15px;
+      }
+      .footer__news-sale:last-child {
+        padding-bottom: 25px;
+      }
+      .footer__news-button {
+        width: 200px;
+        height: 45px;
+        background-color: $footer-black;
+        border: none;
+        color: $font-color-white;
+      }
+      .footer__news-button::before {
+        content: "";
+        display: block;
+      }
+    }
+  }
+}
