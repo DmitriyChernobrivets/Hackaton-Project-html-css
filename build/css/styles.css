@@ -631,13 +631,13 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .header-bottom__select {
   border: 1px solid #979797;
   color: #979797;
-  padding: 20px 15px;
+  padding: 1.25rem 0.9375rem;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -654,12 +654,6 @@ a {
 .header-bottom__select-reset {
   border-bottom: 2px solid #000000;
   color: #979797;
-  padding-bottom: 5px;
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 12px;
-  -webkit-transition: .2s linear;
-  -o-transition: .2s linear;
-  transition: .2s linear;
 }
 
 .header-bottom__select-reset:hover {
@@ -671,12 +665,12 @@ a {
 }
 
 .wrapper {
-  max-width: 1600px;
+  max-width: 83.3333%;
   margin: 0 auto;
 }
 
 .main {
-  padding: 60px 0 110px 0;
+  padding: 3.75rem 0 6.875rem 0;
 }
 
 .flex {
@@ -694,23 +688,29 @@ a {
 }
 
 .content-box:not(:nth-child(n+8)) {
-  margin-bottom: 60px;
+  margin-bottom: 3.75rem;
 }
 
 .content-box {
   width: 380px;
   min-height: 100px;
+  margin: 0 auto;
+}
+
+.content-box__float-btn {
+  background-color: transparent;
+  border: none;
 }
 
 .content-box__img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
 }
 
 .content-box__img-holder {
   position: relative;
-  margin-bottom: 22px;
+  margin-bottom: 1.375rem;
 }
 
 .content-box__img-holder:hover .content-box__learn-more {
@@ -722,8 +722,8 @@ a {
 
 .content-box__learn-txt {
   font-size: 12px;
-  border-bottom: 2px solid black;
-  font-family: "Roboto-Bold", Arial, sans-serif;
+  border-bottom: 1px solid black;
+  font-family: "Roboto", Arial, sans-serif;
   -webkit-transition: .2s linear;
   -o-transition: .2s linear;
   transition: .2s linear;
@@ -734,7 +734,7 @@ a {
   -webkit-transition: .2s linear;
   -o-transition: .2s linear;
   transition: .2s linear;
-  border-bottom: 2px solid #e73331;
+  border-bottom: 1px solid #e73331;
 }
 
 .content-box__collection {
@@ -745,7 +745,7 @@ a {
 }
 
 .content-box__collection-name {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
   text-align: center;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 13px;
@@ -753,7 +753,7 @@ a {
 
 .content-box__collection-name > :last-child {
   border-left: 1px solid #efefef;
-  padding-left: 4px;
+  padding-left: 0.25rem;
 }
 
 .content-box__collection-price {
@@ -766,7 +766,7 @@ a {
 
 .content-box__collection-price__throught {
   text-decoration: line-through;
-  margin-right: 12px;
+  margin-right: 0.75rem;
 }
 
 .content-box__learn-more {
@@ -783,7 +783,7 @@ a {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 13px;
+  padding: 0.8125rem;
   width: 100%;
   opacity: 0;
   -webkit-transition: .2s linear;
@@ -794,8 +794,8 @@ a {
 .content-box__learn-more .btn {
   -webkit-border-radius: 20%;
   border-radius: 20%;
-  height: 20px;
-  width: 20px;
+  height: 1.25rem;
+  width: 1.25rem;
   cursor: pointer;
   -webkit-transition: .2s linear;
   -o-transition: .2s linear;
@@ -815,9 +815,9 @@ a {
 .content-box__sale {
   position: absolute;
   color: #e73331;
-  right: 25px;
-  top: 25px;
-  padding: 30px 20px;
+  right: 1.5625rem;
+  top: 1.5625rem;
+  padding: 1.875rem 1.25rem;
   -webkit-border-radius: 60%;
   border-radius: 60%;
   background-color: #ffffff;
@@ -839,6 +839,9 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .footer .block .footer__block1 {
@@ -989,4 +992,24 @@ a {
 .footer .block2 .block2__rights {
   color: #ffffff;
   padding: 20px 0 22px;
+}
+
+@media (max-width: 768px) {
+  .header-bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .content-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 3.75rem;
+    width: 100%;
+  }
 }
