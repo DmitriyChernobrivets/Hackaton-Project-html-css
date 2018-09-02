@@ -96,3 +96,34 @@
     color: $font-color-white;
 }
 }
+
+.header-bottom {
+    display: flex;
+    margin-bottom: 40px;
+   &__select {
+    border:1px solid $footer-font-black;;
+    color: $footer-font-black;
+    padding: 20px 15px;
+    flex-grow: 1;
+    font-family: $font-family-Roboto;
+    font-size: $font-size-very-small;
+    text-transform: uppercase;
+    &:not(:last-child) {
+        border-right: transparent;
+    }
+}
+&__select-reset {
+    border-bottom: 2px solid $font-color-main;
+    color: $footer-font-black;
+    padding-bottom: 5px;
+    font-family: $font-family-Roboto;
+    font-size: $font-size-very-small;
+    transition: .2s linear;
+    &:hover {
+        color: $font-color-red;
+        border-bottom: 2px solid $font-color-red;
+        transition: .2s linear;
+    }
+}    
+}
+
