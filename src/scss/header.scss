@@ -11,7 +11,8 @@
 .btn {
     margin: 0;
     padding: 0;
-    border: 0;
+    border: none;
+    cursor: pointer;
     background-color: transparent;
 }
 
@@ -24,7 +25,7 @@
 
 .header {
     color: $font-color-white;
-    background-color: $color-background;
+    background-color:$color-background;
 }
 
 .wrapper-logo-menu {
@@ -39,45 +40,57 @@
     font-size: $font-size-large;
 }
 
-
 .menu {
     display: flex;
     align-items: center;
-
     &__item {
-    margin-right: 40px;
-}
+        margin-right: 40px;
+        position: relative;
+    }
+    
     &__item:last-child {
-    margin-right: 0px;
-}
+        margin-right: 0px;
+    }
+    &__item--active::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 1px;
+        background-color: #ddd;
+        position: absolute;
+        margin-top: 7px;
+    }
+    &__item--active:hover::after {
+        width: 100%;
+    }
     &__link {
-    font-size: $font-size-very-small;
-    font-family: $font-family-Roboto;
-    color: $font-color-white;
-    text-transform: uppercase;
-    font-weight: 300;
-}
-.menu__link--decor::after {
-    content: '';
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 5px 4px 0 4px;
-    border-color: #686868 transparent transparent transparent;    
-    margin-left: 14px;
-}
+        font-size: $font-size-very-small;
+        font-family: $font-family-Roboto;
+        color: $font-color-white;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+    &__link--decor::after {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 4px 0 4px;
+        border-color: #686868 transparent transparent transparent;    
+        margin-left: 14px;
+    }
 }
 .au-form {
     display: flex;
     align-items: center;
     width: 256px;
-    &__login {
+    &__login-WRP{
         position: relative;
         width: 70px;
-        text-align: center;
+        padding-left: 28px;
     }
-    &__login--decor::before {
+    &__login-WRP::before {
        content: '';
        display: inline-block;
        width: 16px;
@@ -88,42 +101,49 @@
        top: 0;
        left: 0;
        transform: translateY(-2px);
-
     }
-
-&__login,
-&__reg {
-    color: $font-color-white;
-}
-}
-
-.header-bottom {
-    display: flex;
-    margin-bottom: 40px;
-   &__select {
-    border:1px solid $footer-font-black;;
-    color: $footer-font-black;
-    padding: 20px 15px;
-    flex-grow: 1;
-    font-family: $font-family-Roboto;
-    font-size: $font-size-very-small;
-    text-transform: uppercase;
-    &:not(:last-child) {
-        border-right: transparent;
+    &__login,
+    &__reg {
+        color: $font-color-white;
     }
-}
-&__select-reset {
-    border-bottom: 2px solid $font-color-main;
-    color: $footer-font-black;
-    padding-bottom: 5px;
-    font-family: $font-family-Roboto;
-    font-size: $font-size-very-small;
-    transition: .2s linear;
-    &:hover {
-        color: $font-color-red;
-        border-bottom: 2px solid $font-color-red;
-        transition: .2s linear;
+    &__reg-WRP {
+        padding-left: 10px;
+        border-left: 1px solid #dddddd; 
+        margin-right: 29px;
     }
-}    
+    &__btn-like {
+        width: 16px;
+        height: 15px;
+        margin-right: 29px;
+    }
+    &__btn-inbox {
+        width: 14px;
+        height: 15px;
+    }
+    &__icon-heart,
+    &__icon-inbox {
+        fill: $font-color-grey;
+        text-align: center;
+    }
+    &__icon-heart {
+        width: 16px;
+        height: 15px;
+    }
+    &__icon-inbox {
+        width: 14px;
+        height: 15px;
+    }
+    &__btn-inbox,
+    &__btn-like {
+        position: relative;
+    }
+    &__notification {
+        font-size: $font-size-very-very-small;
+        position: absolute;
+        color: $font-color-grey;
+        right: 0;
+        transform: translate(6px, -6px);
+    }
+    
 }
 
