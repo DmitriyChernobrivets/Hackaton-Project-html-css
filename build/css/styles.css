@@ -829,14 +829,7 @@ a {
   margin: 5px 0 43px;
 }
 
-.footer .block .footer__block4 .footer__join-button {
-  background-image: url(../img/instagram-logo.png);
-  -webkit-background-size: cover;
-  background-size: cover;
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  border: none;
+.footer .block .footer__block4 .footer__join-svg {
   margin-right: 18px;
 }
 
@@ -860,9 +853,32 @@ a {
   background-color: #333333;
   border: none;
   color: #ffffff;
+  position: relative;
 }
 
 .footer .block .footer__block5 .footer__news-button::before {
   content: "";
   display: block;
+  background-image: url(../img/paper-airplane-outline.png);
+  width: 42px;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-right: 2px solid #979797;
+}
+
+.footer .block2 {
+  background-color: #222222;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.footer .block2 .block2__rights {
+  color: #ffffff;
+  padding: 20px 0 22px;
 }
