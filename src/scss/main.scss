@@ -1,11 +1,10 @@
 .wrapper {
-  max-width: 83.3333%;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
 .main {
-  padding: calculateRem(60px) 0 calculateRem(110px) 0;
-
+  padding: 60px 0 110px 0;
 }
 .flex {
   display: flex;
@@ -14,30 +13,21 @@
 }
 
 .content-box:not(:nth-child(n+8)) {
-  margin-bottom: calculateRem(60px);
+  margin-bottom: 60px;
 }
 .content-box {
   width: 380px;
   min-height: 100px;
-  margin: 0 auto;
-  @media (max-width: 768px) {
-    flex-direction: column;
-    margin-bottom: calculateRem(60px);
-    width: 100%;
-  }
-  &__float-btn {
-    background-color: transparent;
-    border: none;
-  }
+
   &__img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
   }
 
   &__img-holder {
     position: relative;
-    margin-bottom: calculateRem(22px);
+    margin-bottom: 22px;
 
     &:hover .content-box__learn-more {
       opacity: 1;
@@ -48,13 +38,13 @@
   &__learn-txt {
     font-size: $font-size-very-small;
     
-    border-bottom: 1px solid black;
-    font-family: $font-family-Roboto;
+    border-bottom: 2px solid black;
+    font-family: $font-family-Roboto-Bold;
     transition: .2s linear;
     &:hover {
       color: $font-color-red;
       transition: .2s linear;
-      border-bottom: 1px solid $font-color-red;
+      border-bottom: 2px solid $font-color-red;
     }
     
   }
@@ -67,14 +57,14 @@
   }
 
   &__collection-name {
-    margin-bottom: calculateRem(15px);
+    margin-bottom: 15px;
     text-align: center;
     font-family: $font-family-Roboto;
     font-size: $font-size-small;
 
     >:last-child {
       border-left: 1px solid $footer-background;
-      padding-left: calculateRem(4px);
+      padding-left: 4px;
     }
   }
 
@@ -87,7 +77,7 @@
 
     &__throught {
       text-decoration: line-through;
-      margin-right: calculateRem(12px);
+      margin-right: 12px;
     }
   }
 
@@ -97,15 +87,15 @@
     background-color: $main-learn-bg;
     display: flex;
     justify-content: space-between;
-    padding: calculateRem(13px);
+    padding: 13px;
     width: 100%;
     opacity: 0;
     transition: .2s linear;
 
     .btn {
       border-radius: 20%;
-      height: calculateRem(20px);
-      width: calculateRem(20px);
+      height: 20px;
+      width: 20px;
       cursor: pointer;
       transition: .2s linear;
       
@@ -120,9 +110,9 @@
   &__sale {
     position: absolute;
     color: $font-color-red;
-    right: calculateRem(25px);
-    top: calculateRem(25px);
-    padding: calculateRem(30px) calculateRem(20px);
+    right: 25px;
+    top: 25px;
+    padding: 30px 20px;
     border-radius: 60%;
     background-color: $font-color-white;
   }
