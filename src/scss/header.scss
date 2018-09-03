@@ -19,8 +19,9 @@
 .wrapper-header {
   display: flex;
   justify-content: space-between;
-  padding-top: 31px;
-  padding-bottom: 31px;
+  flex-wrap: wrap;
+  padding-top: calculateRem(31);
+  padding-bottom: calculateRem(31);
 }
 
 .header {
@@ -29,9 +30,10 @@
 }
 
 .wrapper-logo-menu {
-  width: 801px;
+  flex-basis: 75%;
   display: flex;
   justify-content: space-between;
+
 }
 
 .link-logo {
@@ -45,7 +47,7 @@
   align-items: center;
 
   &__item {
-    margin-right: 40px;
+    margin-right: calculateRem(40);
     position: relative;
   }
 
@@ -60,11 +62,22 @@
     height: 1px;
     background-color: #ddd;
     position: absolute;
-    margin-top: 7px;
+    margin-top: calculateRem(7);
   }
 
   &__item--active:hover::after {
     width: 100%;
+  }
+
+  &__select {
+    color: $font-color-white;
+    background-color: #000;
+    font-size: $font-size-very-small;
+    font-family: $font-family-Roboto;
+    text-transform: uppercase;
+    border:none;
+    outline: none;
+    
   }
 
   &__link {
@@ -83,22 +96,29 @@
     border-style: solid;
     border-width: 5px 4px 0 4px;
     border-color: #686868 transparent transparent transparent;
-    margin-left: 14px;
+    margin-left:  calculateRem(14);
   }
 }
 
 .au-form {
   display: flex;
   align-items: center;
-  width: 256px;
+  flex-basis: 222px;
 
-  &__login-WRP {
+  &__btn-login,
+  &__btn-reg {
+    color: $font-color-white;
     position: relative;
-    width: 70px;
-    padding-left: 28px;
+  }
+  &__btn-login {
+    margin-right: calculateRem(10);
+    padding-left: calculateRem(30);
+  }
+  &__btn-reg {
+    margin-right: calculateRem(29);
   }
 
-  &__login-WRP::before {
+  &__btn-login::before {
     content: '';
     display: inline-block;
     width: 16px;
@@ -108,24 +128,22 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateY(-2px);
+    transform: translateY( -2px);
   }
+  &__btn-reg::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: $font-color-grey;
+    margin-right: calculateRem(9);
 
-  &__login,
-  &__reg {
-    color: $font-color-white;
-  }
-
-  &__reg-WRP {
-    padding-left: 10px;
-    border-left: 1px solid #dddddd;
-    margin-right: 29px;
   }
 
   &__btn-like {
     width: 16px;
     height: 15px;
-    margin-right: 29px;
+    margin-right: calculateRem(29);
   }
 
   &__btn-inbox {
@@ -165,19 +183,17 @@
 
 .header-bottom {
   display: flex;
-  margin-bottom: calculateRem(40px);
-    @media (max-width: 768px){
-        flex-direction: column;
-    }
+  margin-bottom:calculateRem(40);
+
   &__select {
     border: 1px solid $footer-font-black;
     color: $footer-font-black;
-    padding: calculateRem(20px) calculateRem(15px);
+    padding: calculateRem(20) calculateRem(15);
     flex-grow: 1;
     font-family: $font-family-Roboto;
     font-size: $font-size-very-small;
     text-transform: uppercase;
-    
+
     &:not(:last-child) {
       border-right: transparent;
     }
@@ -186,6 +202,10 @@
   &__select-reset {
     border-bottom: 2px solid $font-color-main;
     color: $footer-font-black;
+    padding-bottom: calculateRem(5);
+    font-family: $font-family-Roboto;
+    font-size: $font-size-very-small;
+    transition: .2s linear;
 
     &:hover {
       color: $font-color-red;
