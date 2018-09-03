@@ -33,7 +33,6 @@
   flex-basis: 75%;
   display: flex;
   justify-content: space-between;
-
 }
 
 .link-logo {
@@ -56,7 +55,7 @@
   }
 
   &__item--active::after {
-    content: '';
+    content: "";
     display: block;
     width: 0;
     height: 1px;
@@ -75,9 +74,8 @@
     font-size: $font-size-very-small;
     font-family: $font-family-Roboto;
     text-transform: uppercase;
-    border:none;
+    border: none;
     outline: none;
-    
   }
 
   &__link {
@@ -89,14 +87,14 @@
   }
 
   &__link--decor::after {
-    content: '';
+    content: "";
     display: inline-block;
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 5px 4px 0 4px;
     border-color: #686868 transparent transparent transparent;
-    margin-left:  calculateRem(14);
+    margin-left: calculateRem(14);
   }
 }
 
@@ -119,25 +117,24 @@
   }
 
   &__btn-login::before {
-    content: '';
+    content: "";
     display: inline-block;
     width: 16px;
     height: 16px;
-    background-image: url('../img/profile.png');
+    background-image: url("../img/profile.png");
     background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateY( -2px);
+    transform: translateY(-2px);
   }
   &__btn-reg::before {
-    content: '';
+    content: "";
     display: inline-block;
     width: 1px;
     height: 10px;
     background-color: $font-color-grey;
     margin-right: calculateRem(9);
-
   }
 
   &__btn-like {
@@ -151,13 +148,13 @@
     height: 15px;
   }
 
-  &__icon-heart,
+  &__icon-like,
   &__icon-inbox {
     fill: $font-color-grey;
     text-align: center;
   }
 
-  &__icon-heart {
+  &__icon-like {
     width: 16px;
     height: 15px;
   }
@@ -179,11 +176,22 @@
     right: 0;
     transform: translate(6px, -6px);
   }
+  &__btn-login--active:hover,
+  &__btn-reg--active:hover {
+    color: $font-color-red;
+    transition: all 0.2s ease-in;
+  }
+  &__btn-like--active:hover &__icon-like,
+  &__btn-inbox--active:hover &__icon-inbox {
+    transform: scale(1.2);
+    fill: $font-color-red;
+    transition: all 0.2s ease-in;
+  }
 }
 
 .header-bottom {
   display: flex;
-  margin-bottom:calculateRem(40);
+  margin-bottom: calculateRem(40);
 
   &__select {
     border: 1px solid $footer-font-black;
@@ -205,12 +213,12 @@
     padding-bottom: calculateRem(5);
     font-family: $font-family-Roboto;
     font-size: $font-size-very-small;
-    transition: .2s linear;
+    transition: 0.2s linear;
 
     &:hover {
       color: $font-color-red;
       border-bottom: 2px solid $font-color-red;
-      transition: .2s linear;
+      transition: 0.2s linear;
     }
   }
 }
