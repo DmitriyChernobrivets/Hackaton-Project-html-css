@@ -698,7 +698,7 @@ a {
   background-color: #ecf2f6;
 }
 
-.header-bottom__select:not(:last-child) {
+.header-bottom:not(:last-child) {
   border-right: transparent;
 }
 
@@ -744,8 +744,13 @@ a {
   justify-content: space-between;
 }
 
+
+.content-box:not(:nth-child(n + 8)) {
+  margin-bottom: 3.75rem;
+
 .content-box:not(:nth-child(n+8)) {
   margin-bottom: 60px;
+
 }
 
 .content-box {
@@ -766,26 +771,41 @@ a {
 
 .content-box__img-holder:hover .content-box__learn-more {
   opacity: 1;
-  -webkit-transition: .2s linear;
-  -o-transition: .2s linear;
-  transition: .2s linear;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 
 .content-box__learn-txt {
   font-size: 12px;
+
+  border-bottom: 1px solid black;
+  font-family: "Roboto", Arial, sans-serif;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+
   border-bottom: 2px solid black;
   font-family: "Roboto-Bold", Arial, sans-serif;
   -webkit-transition: .2s linear;
   -o-transition: .2s linear;
   transition: .2s linear;
+
 }
 
 .content-box__learn-txt:hover {
   color: #e73331;
+
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+  border-bottom: 1px solid #e73331;
+
   -webkit-transition: .2s linear;
   -o-transition: .2s linear;
   transition: .2s linear;
   border-bottom: 2px solid #e73331;
+
 }
 
 .content-box__collection {
@@ -837,9 +857,9 @@ a {
   padding: 13px;
   width: 100%;
   opacity: 0;
-  -webkit-transition: .2s linear;
-  -o-transition: .2s linear;
-  transition: .2s linear;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 
 .content-box__learn-more .btn {
@@ -848,16 +868,16 @@ a {
   height: 20px;
   width: 20px;
   cursor: pointer;
-  -webkit-transition: .2s linear;
-  -o-transition: .2s linear;
-  transition: .2s linear;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 
 .content-box__learn-more .btn:hover {
   fill: #e73331;
-  -webkit-transition: .2s linear;
-  -o-transition: .2s linear;
-  transition: .2s linear;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -1065,6 +1085,18 @@ a {
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
+  .header-bottom__form {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .header-bottom__select {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+  }
+
   .content-box {
     -webkit-flex-basis: 30%;
     -ms-flex-preferred-size: 30%;
