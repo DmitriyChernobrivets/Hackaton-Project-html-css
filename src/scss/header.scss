@@ -33,6 +33,7 @@
   flex-basis: 75%;
   display: flex;
   justify-content: space-between;
+  
 }
 
 .link-logo {
@@ -188,10 +189,19 @@
     transition: all 0.2s ease-in;
   }
 }
-
-.header-bottom {
+.header-bottom__form {
   display: flex;
+
+  @media (max-width: 768px){
+    flex-direction: column;
+}
+}
+.header-bottom {
+  margin-bottom: calculateRem(40px);
+    
+
   margin-bottom: calculateRem(40);
+
 
   &__select {
     border: 1px solid $footer-font-black;
@@ -202,8 +212,12 @@
     font-size: $font-size-very-small;
     text-transform: uppercase;
 
+    background-color: #ecf2f6;
+
+
+
     &:not(:last-child) {
-      border-right: transparent;
+        border-right: transparent;
     }
   }
 
@@ -222,3 +236,4 @@
     }
   }
 }
+
