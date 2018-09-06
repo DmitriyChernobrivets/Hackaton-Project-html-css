@@ -29,7 +29,8 @@ $font-family-Roboto-Bold: 'Roboto-Bold',
 Arial,
 sans-serif;
 
+
 @function calculateRem($size) {
-    $remSize: $size / 16px;
+    $remSize: $size / 16;
     @return #{$remSize}rem;
-  }
+    }
