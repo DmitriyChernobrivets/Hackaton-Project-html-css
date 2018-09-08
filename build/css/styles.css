@@ -829,133 +829,120 @@ a {
 }
 
 .footer .wrapper {
-  width: 1600px;
+  width: 83.33333%;
 }
 
 .footer .block {
   padding: 105px 0 77px;
-  margin: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-.footer .block .footer__block1 {
-  margin-right: 150px;
-}
-
-.footer .block .footer__block1 .footer__title {
+.footer .footer__title {
   font-size: 28px;
   font-family: "CormorantUnicase-Regular", Arial, sans-serif;
   text-transform: uppercase;
-  margin: 0px 0px 42px;
+  margin-bottom: 42px;
 }
 
-.footer .block .footer__block1 .footer__info-production {
+.footer .footer__info-production {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 12px;
-}
-
-.footer .block .footer__block1 .swimsuit {
-  padding-bottom: 15px;
-}
-
-.footer .block .footer__block1 .fitness {
+  width: 166px;
   padding-bottom: 20px;
+  line-height: 2;
 }
 
-.footer .block .footer__block1 .footer__info-contact {
+.footer .footer__info-contact {
   font-family: "Roboto", Arial, sans-serif;
   font-weight: bold;
   padding-bottom: 12px;
 }
 
-.footer .block .footer__block1 .footer__info-contact:last-child {
+.footer .footer__info-contact:last-child {
   padding-bottom: 0;
 }
 
-.footer .block .footer__block2 {
-  margin-right: 178px;
-}
-
-.footer .block .footer__block2 .footer__subtitle-about {
+.footer .footer__subtitle-about {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 18px;
-  margin: 5px 0 43px;
+  padding: 5px 0 43px;
 }
 
-.footer .block .footer__block2 .footer__about-list {
+.footer .footer__about-list {
   list-style: none;
 }
 
-.footer .block .footer__block2 .footer__about-link {
+.footer .footer__about-link {
   color: #333333;
 }
 
-.footer .block .footer__block2 .footer__about-item {
+.footer .footer__about-item {
   margin-bottom: 12px;
 }
 
-.footer .block .footer__block2 .footer__about-link:hover {
+.footer .footer__about-link:hover {
   text-decoration: underline;
 }
 
-.footer .block .footer__block3 {
-  margin-right: 128px;
-}
-
-.footer .block .footer__block3 .footer__questions-subtitle {
+.footer .footer__questions-subtitle {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 18px;
   margin: 5px 0 43px;
 }
 
-.footer .block .footer__block3 .footer__questions-list {
+.footer .footer__questions-list {
   list-style: none;
 }
 
-.footer .block .footer__block3 .footer__questions-link {
+.footer .footer__questions-link {
   color: #333333;
 }
 
-.footer .block .footer__block3 .footer__questions-item {
+.footer .footer__questions-item {
   margin-bottom: 12px;
 }
 
-.footer .block .footer__block3 .footer__questions-link:hover {
+.footer .footer__questions-link:hover {
   text-decoration: underline;
 }
 
-.footer .block .footer__block4 {
-  margin-right: 116px;
-}
-
-.footer .block .footer__block4 .footer__join-subtitle {
+.footer .footer__join-subtitle {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 18px;
   margin: 5px 0 43px;
 }
 
-.footer .block .footer__block4 .footer__join-svg {
+.footer .footer__join-svg {
   margin-right: 18px;
 }
 
-.footer .block .footer__block5 .footer__news-subtitle {
+.footer .footer__news-subtitle {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 18px;
   margin: 5px 0 43px;
 }
 
-.footer .block .footer__block5 .footer__news-sale {
+.footer .footer__news-sale {
   padding-bottom: 15px;
+  width: 180px;
+  line-height: 2;
 }
 
-.footer .block .footer__block5 .footer__news-sale:last-child {
+.footer .footer__news-sale:last-child {
   padding-bottom: 25px;
 }
 
-.footer .block .footer__block5 .footer__news-button {
+.footer .footer__news-button {
   width: 200px;
   height: 45px;
   background-color: #333333;
@@ -964,7 +951,7 @@ a {
   position: relative;
 }
 
-.footer .block .footer__block5 .footer__news-button::before {
+.footer .footer__news-button::before {
   content: "";
   display: block;
   background-image: url(../img/paper-airplane-outline.png);
@@ -989,4 +976,37 @@ a {
 .footer .block2 .block2__rights {
   color: #ffffff;
   padding: 20px 0 22px;
+}
+
+@media (max-width: 1200px) {
+  .footer .block {
+    text-align: center;
+  }
+
+  .footer .footer__block {
+    width: 33.3%;
+    padding-bottom: 100px;
+  }
+
+  .footer .footer__info-production {
+    width: 100%;
+  }
+
+  .footer .footer__news-sale {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer .footer__block {
+    padding-bottom: 75px;
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768) {
+  .footer .footer__news-button {
+    width: 162px;
+  }
 }

@@ -1,3 +1,162 @@
+// .footer {
+//   background-color: $footer-background;
+//   color: $footer-black;
+//   .wrapper {
+//     width: 83.33333%;
+//   }
+//   .block {
+//     padding: 105px 0 77px;
+//     display: flex;
+//     justify-content: space-between;
+//     flex-wrap: wrap;
+//     .footer__block1 {
+//       @media(min-width:769px){
+//         margin-right: 150px;
+//       }
+//       .footer__title {
+//         font-size: $font-size-large;
+//         font-family: $font-family-CormorantUnicase-Regular;
+//         text-transform: uppercase;
+//         margin: 0px 0px 42px;
+//       }
+//       .footer__info-production {
+//         font-family: $font-family-Roboto;
+//         font-size: 12px;
+//       }
+//       .swimsuit {
+//         padding-bottom: 15px;
+//       }
+//       .fitness {
+//         padding-bottom: 20px;
+//       }
+//       .footer__info-contact {
+//         font-family: $font-family-Roboto;
+//         font-weight: bold;
+//         padding-bottom: 12px;
+//       }
+//       .footer__info-contact:last-child {
+//         padding-bottom: 0;
+//       }
+//     }
+//     .footer__block2 {
+//       @media(min-width:769px){
+//         margin-right: 178px;
+//       }
+//       .footer__subtitle-about {
+//         font-family: $font-family-Roboto;
+//         font-size: 18px;
+//         margin: 5px 0 43px;
+//       }
+//       .footer__about-list {
+//         list-style: none;
+//       }
+//       .footer__about-link {
+//         color: $footer-black;
+//       }
+//       .footer__about-item {
+//         margin-bottom: 12px;
+//       }
+//       .footer__about-link:hover {
+//         text-decoration: underline;
+//       }
+//     }
+//     .footer__block3 {
+//       @media(min-width:769px){
+//         margin-right: 128px;
+//       }
+//       .footer__questions-subtitle {
+//         font-family: $font-family-Roboto;
+//         font-size: 18px;
+//         margin: 5px 0 43px;
+//       }
+//       .footer__questions-list {
+//         list-style: none;
+//       }
+//       .footer__questions-link {
+//         color: $footer-black;
+//       }
+//       .footer__questions-item {
+//         margin-bottom: 12px;
+//       }
+//       .footer__questions-link:hover {
+//         text-decoration: underline;
+//       }
+//     }
+//     .footer__block4 {
+//       @media(min-width:769px){
+//         margin-right: 116px;
+//       }
+//       .footer__join-subtitle {
+//         font-family: $font-family-Roboto;
+//         font-size: 18px;
+//         margin: 5px 0 43px;
+//       }
+//       .footer__join-svg{
+//         margin-right:18px;
+//       }
+//     }
+//     .footer__block5 {
+//       .footer__news-subtitle {
+//         font-family: $font-family-Roboto;
+//         font-size: 18px;
+//         margin: 5px 0 43px;
+//       }
+//       .footer__news-sale {
+//         padding-bottom: 15px;
+//       }
+//       .footer__news-sale:last-child {
+//         padding-bottom: 25px;
+//       }
+//       .footer__news-button {
+//         width: 200px;
+//         height: 45px;
+//         background-color: $footer-black;
+//         border: none;
+//         color: $font-color-white;
+//         position: relative;
+//       }
+//       .footer__news-button::before {
+//         content: "";
+//         display: block;
+//         background-image: url(../img/paper-airplane-outline.png);
+//         width: 42px;
+//         height: inherit;
+//         position: absolute;
+//         top:0;
+//         background-repeat: no-repeat;
+//         background-position: center;
+//         border-right: 2px solid $footer-font-black;
+//       }
+//     }
+//   }
+//   .block2{
+//     background-color: #222222;
+//     display: flex;
+//     text-align: center;
+//     .block2__rights{
+//       color: $font-color-white;
+//       padding: 20px 0 22px;
+//     }
+//   }
+//   @media (max-width: 768px){
+//     .block{
+//       flex-direction: column;
+
+//     }
+//     .footer__block{
+//       margin: 0 auto;
+//       text-align: center;
+//     }
+//     .footer__block4{
+//       displey: flex;
+//       flex-direction: column;
+//       text-align: center;
+
+//     }
+//     }
+//   }
+// }
+
 .footer {
   background-color: $footer-background;
   color: $footer-black;
@@ -8,151 +167,138 @@
     padding: 105px 0 77px;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; 
-    .footer__block1 {
-      @media(min-width:769px){
-        margin-right: 150px;
-      }
-      .footer__title {
-        font-size: $font-size-large;
-        font-family: $font-family-CormorantUnicase-Regular;
-        text-transform: uppercase;
-        margin: 0px 0px 42px;
-      }
-      .footer__info-production {
-        font-family: $font-family-Roboto;
-        font-size: 12px;
-      }
-      .swimsuit {
-        padding-bottom: 15px;
-      }
-      .fitness {
-        padding-bottom: 20px;
-      }
-      .footer__info-contact {
-        font-family: $font-family-Roboto;
-        font-weight: bold;
-        padding-bottom: 12px;
-      }
-      .footer__info-contact:last-child {
-        padding-bottom: 0;
-      }
+    flex-wrap: wrap;
+    @media (max-width: 768px) {
+      // flex-direction: column;
     }
-    .footer__block2 {
-      @media(min-width:769px){
-        margin-right: 178px;
-      }
-      .footer__subtitle-about {
-        font-family: $font-family-Roboto;
-        font-size: 18px;
-        margin: 5px 0 43px;
-      }
-      .footer__about-list {
-        list-style: none;
-      }
-      .footer__about-link {
-        color: $footer-black;
-      }
-      .footer__about-item {
-        margin-bottom: 12px;
-      }
-      .footer__about-link:hover {
-        text-decoration: underline;
-      }
-    }
-    .footer__block3 {
-      @media(min-width:769px){
-        margin-right: 128px;
-      }
-      .footer__questions-subtitle {
-        font-family: $font-family-Roboto;
-        font-size: 18px;
-        margin: 5px 0 43px;
-      }
-      .footer__questions-list {
-        list-style: none;
-      }
-      .footer__questions-link {
-        color: $footer-black;
-      }
-      .footer__questions-item {
-        margin-bottom: 12px;
-      }
-      .footer__questions-link:hover {
-        text-decoration: underline;
-      }
-    }
-    .footer__block4 {
-      @media(min-width:769px){
-        margin-right: 116px;
-      }
-      .footer__join-subtitle {
-        font-family: $font-family-Roboto;
-        font-size: 18px;
-        margin: 5px 0 43px;
-      }
-      .footer__join-svg{
-        margin-right:18px; 
-      }
-    }
-    .footer__block5 {
-      .footer__news-subtitle {
-        font-family: $font-family-Roboto;
-        font-size: 18px;
-        margin: 5px 0 43px;
-      }
-      .footer__news-sale {
-        padding-bottom: 15px;
-      }
-      .footer__news-sale:last-child {
-        padding-bottom: 25px;
-      }
-      .footer__news-button {
-        width: 200px;
-        height: 45px;
-        background-color: $footer-black;
-        border: none;
-        color: $font-color-white;
-        position: relative;
-      }
-      .footer__news-button::before {
-        content: "";
-        display: block;
-        background-image: url(../img/paper-airplane-outline.png);
-        width: 42px;
-        height: inherit;
-        position: absolute;
-        top:0;
-        background-repeat: no-repeat;
-        background-position: center;
-        border-right: 2px solid $footer-font-black;
-      }
+    @media (max-width: 1200px) {
+      text-align: center;
     }
   }
-  .block2{
+  .footer__block {
+    @media (max-width: 768px) {
+      padding-bottom: 75px;
+      width: 50%;
+      margin: 0 auto;
+      
+    }
+    @media (max-width: 1200px) {
+      width: 33.3%;
+      padding-bottom: 100px;
+    }
+  }
+  .footer__title {
+    font-size: $font-size-large;
+    font-family: $font-family-CormorantUnicase-Regular;
+    text-transform: uppercase;
+    margin-bottom: 42px;
+  }
+  .footer__info-production {
+    font-family: $font-family-Roboto;
+    font-size: 12px;
+    width: 166px;
+    padding-bottom: 20px;
+    line-height: 2;
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+  }
+  .footer__info-contact {
+    font-family: $font-family-Roboto;
+    font-weight: bold;
+    padding-bottom: 12px;
+  }
+  .footer__info-contact:last-child {
+    padding-bottom: 0;
+  }
+  .footer__subtitle-about {
+    font-family: $font-family-Roboto;
+    font-size: 18px;
+    padding: 5px 0 43px;
+  }
+  .footer__about-list {
+    list-style: none;
+  }
+  .footer__about-link {
+    color: $footer-black;
+  }
+  .footer__about-item {
+    margin-bottom: 12px;
+  }
+  .footer__about-link:hover {
+    text-decoration: underline;
+  }
+  .footer__questions-subtitle {
+    font-family: $font-family-Roboto;
+    font-size: 18px;
+    margin: 5px 0 43px;
+  }
+  .footer__questions-list {
+    list-style: none;
+  }
+  .footer__questions-link {
+    color: $footer-black;
+  }
+  .footer__questions-item {
+    margin-bottom: 12px;
+  }
+  .footer__questions-link:hover {
+    text-decoration: underline;
+  }
+  .footer__join-subtitle {
+    font-family: $font-family-Roboto;
+    font-size: 18px;
+    margin: 5px 0 43px;
+  }
+  .footer__join-svg {
+    margin-right: 18px;
+  }
+  .footer__news-subtitle {
+    font-family: $font-family-Roboto;
+    font-size: 18px;
+    margin: 5px 0 43px;
+  }
+  .footer__news-sale {
+    padding-bottom: 15px;
+    width: 180px;
+    line-height: 2;
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+  }
+  .footer__news-sale:last-child {
+    padding-bottom: 25px;
+  }
+  .footer__news-button {
+    width: 200px;
+    height: 45px;
+    background-color: $footer-black;
+    border: none;
+    color: $font-color-white;
+    position: relative;
+    @media (max-width:768) {
+      width: 162px;
+    }
+  }
+  .footer__news-button::before {
+    content: "";
+    display: block;
+    background-image: url(../img/paper-airplane-outline.png);
+    width: 42px;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-right: 2px solid $footer-font-black;
+  }
+  .block2 {
     background-color: #222222;
     display: flex;
     text-align: center;
-    .block2__rights{
+    .block2__rights {
       color: $font-color-white;
       padding: 20px 0 22px;
-    }
-  }
-  @media (max-width: 768px){
-    .block{
-      flex-direction: column;
-      
-    }
-    .footer__block{
-      margin: 0 auto;
-      text-align: center;
-    }
-    .footer__block4{
-      displey: flex;
-      flex-direction: column;
-      text-align: center;
-
-    }
     }
   }
 }
