@@ -1,4 +1,7 @@
-
+@function calculateRem($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+  }
 $font-color-white: #ffffff;
 $font-color-grey: #dddddd;
 $font-color-red: #e73331;
@@ -20,10 +23,6 @@ $font-family-CormorantUnicase-Regular: "CormorantUnicase-Regular", Arial,
 $font-family-CormorantUnicase-Bold: "CormorantUnicase-Bold", Arial, sans-serif;
 $font-family-Roboto-Bold: "Roboto-Bold", Arial, sans-serif;
 
-@function calculateRem($size) {
-  $remSize: $size / 16;
-  @return #{$remSize}rem;
-}
 
 $font-color-white: #ffffff;
 $font-color-grey: #dddddd;
@@ -57,8 +56,5 @@ Arial,
 sans-serif;
 
 
-@function calculateRem($size) {
-    $remSize: $size / 16;
-    @return #{$remSize}rem;
-    }
+
 

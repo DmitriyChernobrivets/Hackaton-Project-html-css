@@ -2,23 +2,23 @@
 
     width: 43%;
     margin: 0 auto;
-    padding: 85px 0;
+    padding: calculateRem(85) 0;
     .review-head {
         text-align: center;
-        margin-bottom: 80px;
+        margin-bottom: calculateRem(80);
         &_top {
             text-transform: uppercase;
-            font-size: 18px;
+            font-size: calculateRem(18);
             font-family: $font-family-Roboto;
             font-weight: 200;
-            padding: 30px 0;
+            padding: calculateRem(30) 0;
         }
         &_discription {
-            font-size: 16px;
-            padding-bottom: 40px;
+            font-size: calculateRem(16);
+            padding-bottom: calculateRem(40);
         }
         &_btn {
-            padding: 15px 40px;
+            padding: calculateRem(15) calculateRem(40);
             background-color: transparent;
             border: 1px solid $footer-font-black;
             cursor: pointer;
@@ -39,7 +39,7 @@
             border-top: 1px solid $footer-font-black;
         }
         &_navigation {
-            padding-top: 70px;
+            padding-top: calculateRem(70);
             .navigation_list {
                 list-style: none;
                 display: flex;
@@ -51,16 +51,16 @@
             }
             .navigation_item {
                 &:not(:last-child) {
-                    margin-right: 15px;
+                    margin-right: calculateRem(15);
                 }
                 &:first-child {
-                    margin-right: 35px;
+                    margin-right: calculateRem(35);
                 }
                 &:last-child {
-                    margin-left: 20px;
+                    margin-left: calculateRem(20);
                 }
                 .link {
-                    font-size: 14px;
+                    font-size: calculateRem(14);
                     font-family: $font-family-Roboto;
                     &:hover {
                         color: black;
@@ -77,19 +77,19 @@
         }
         
 
-        padding: 40px 0;
+        padding: calculateRem(40) 0;
         &_post {
             .post {
-                font-size: 16px;
+                font-size: calculateRem(16);
                 line-height: 2;
                 font-family: $font-family-Roboto;
-                margin-bottom: 20px;
+                margin-bottom: calculateRem(20);
             }
             .rvw-btn {
                 border: none;
                 background-color: transparent;
                 color: $font-color-red;               
-                font-size: 16px;
+                font-size: calculateRem(16);
                 cursor: pointer;
             }
         }
@@ -100,17 +100,17 @@
             }
             .user-info {
                 text-transform: uppercase;
-                margin-bottom: 18px;
+                margin-bottom: calculateRem(18);
             }
             .post-date {
                 font-size: $font-size-very-small;
-                margin-bottom: 16px;
+                margin-bottom: calculateRem(16);
  
             }
             .sale-acception {
-                margin-bottom: 16px;
+                margin-bottom: calculateRem(16);
                 &_svg {
-                    margin-right: 5px;
+                    margin-right: calculateRem(5);
                     
                 }
             }

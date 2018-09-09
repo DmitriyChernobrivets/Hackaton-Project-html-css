@@ -1,4 +1,3 @@
-
 .wrapper {
   max-width: 83.3333%;
   margin: 0 auto;
@@ -71,6 +70,7 @@
   @media screen and (max-width: 500px) {
     flex-direction: column;
   }
+
   &__item {
     margin-right: calculateRem(40);
     position: relative;
@@ -92,7 +92,7 @@
   }
 
   &__item--active::after {
-    content: "";
+    content: '';
     display: block;
     width: 0;
     height: 1px;
@@ -108,6 +108,7 @@
       width: 0%;
     }
   }
+
   &__item--active:hover &__link,
   &__item--active:focus &__link {
     @media screen and (max-width: 500px) {
@@ -124,6 +125,7 @@
     border: none;
     outline: none;
   }
+
   &__select:hover,
   &__select:focus {
     @media screen and (max-width: 500px) {
@@ -140,7 +142,7 @@
   }
 
   &__link--decor::after {
-    content: "";
+    content: '';
     display: inline-block;
     width: 0;
     height: 0;
@@ -167,28 +169,31 @@
     color: $font-color-white;
     position: relative;
   }
+
   &__btn-login {
     margin-right: calculateRem(10);
     padding-left: calculateRem(30);
   }
+
   &__btn-reg {
     margin-right: calculateRem(29);
   }
 
   &__btn-login::before {
-    content: "";
+    content: '';
     display: inline-block;
     width: 16px;
     height: 16px;
-    background-image: url("../img/profile.png");
+    background-image: url('../img/profile.png');
     background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
     transform: translateY(-2px);
   }
+
   &__btn-reg::before {
-    content: "";
+    content: '';
     display: inline-block;
     width: 1px;
     height: 10px;
@@ -235,6 +240,7 @@
     right: 0;
     transform: translate(6px, -6px);
   }
+
   &__btn-login--active:hover,
   &__btn-reg--active:hover,
   &__btn-login--active:focus,
@@ -242,6 +248,7 @@
     color: $font-color-red;
     transition: all 0.2s ease-in;
   }
+
   &__btn-like--active:hover &__icon-like,
   &__btn-inbox--active:hover &__icon-inbox,
   &__btn-like--active:focus &__icon-like,
@@ -252,40 +259,6 @@
   }
 }
 
-.header-bottom {
-  display: flex;
-  margin-bottom: calculateRem(40);
-
-  &__select {
-    border: 1px solid $footer-font-black;
-    color: $footer-font-black;
-    padding: calculateRem(20) calculateRem(15);
-    flex-grow: 1;
-    font-family: $font-family-Roboto;
-    font-size: $font-size-very-small;
-    text-transform: uppercase;
-
-    &:not(:last-child) {
-      border-right: transparent;
-    }
-  }
-
-  &__select-reset {
-    border-bottom: 2px solid $font-color-main;
-    color: $footer-font-black;
-    padding-bottom: calculateRem(5);
-    font-family: $font-family-Roboto;
-    font-size: $font-size-very-small;
-    transition: 0.2s linear;
-
-    &:hover {
-      color: $font-color-red;
-      border-bottom: 2px solid $font-color-red;
-      transition: 0.2s linear;
-    }
-  }
-}
-=======
 .list {
   list-style: none;
   margin: 0;
@@ -343,7 +316,7 @@
   }
 
   &__item--active::after {
-    content: "";
+    content: '';
     display: block;
     width: 0;
     height: 1px;
@@ -375,7 +348,7 @@
   }
 
   &__link--decor::after {
-    content: "";
+    content: '';
     display: inline-block;
     width: 0;
     height: 0;
@@ -396,28 +369,31 @@
     color: $font-color-white;
     position: relative;
   }
+
   &__btn-login {
     margin-right: calculateRem(10);
     padding-left: calculateRem(30);
   }
+
   &__btn-reg {
     margin-right: calculateRem(29);
   }
 
   &__btn-login::before {
-    content: "";
+    content: '';
     display: inline-block;
     width: 16px;
     height: 16px;
-    background-image: url("../img/profile.png");
+    background-image: url('../img/profile.png');
     background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
     transform: translateY(-2px);
   }
+
   &__btn-reg::before {
-    content: "";
+    content: '';
     display: inline-block;
     width: 1px;
     height: 10px;
@@ -464,11 +440,13 @@
     right: 0;
     transform: translate(6px, -6px);
   }
+
   &__btn-login--active:hover,
   &__btn-reg--active:hover {
     color: $font-color-red;
     transition: all 0.2s ease-in;
   }
+
   &__btn-like--active:hover &__icon-like,
   &__btn-inbox--active:hover &__icon-inbox {
     transform: scale(1.2);
@@ -477,27 +455,34 @@
   }
 }
 
-.header-bottom__form {
-  display: flex;
-
-
-  @media (max-width: 768px) {
-
-  @media (max-width: 768px){
-
-    flex-direction: column;
-  }
-  @media (min-width: 769px) and (max-width: 1200px) {
-    flex-wrap: wrap;
-  }
-}
-
 .header-bottom {
-  margin-bottom: calculateRem(40px);
-
-    
-
   margin-bottom: calculateRem(40);
+  margin-bottom: calculateRem(40);
+
+  &__form {
+    display: flex;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+    @media (min-width: 769px) and (max-width: 1200px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__select-reset {
+    border-bottom: 2px solid $font-color-main;
+    color: $footer-font-black;
+    padding-bottom: calculateRem(15);
+    font-family: $font-family-Roboto;
+    font-size: $font-size-very-small;
+    transition: 0.2s linear;
+    &:hover {
+      color: $font-color-red;
+      border-bottom: 2px solid $font-color-red;
+      transition: 0.2s linear;
+    }
+  }
 
 
 
@@ -509,38 +494,13 @@
     font-family: $font-family-Roboto;
     font-size: $font-size-very-small;
     text-transform: uppercase;
-
     background-color: #ecf2f6;
-
     @media (min-width: 769px) and (max-width: 1200px) {
       flex-basis: 50%;
-
-
-
+    }
 
     &:not(:last-child) {
-        border-right: transparent;
-
-    }
-  }
-
-  &:not(:last-child) {
-    border-right: transparent;
-  }
-
-  &__select-reset {
-    border-bottom: 2px solid $font-color-main;
-    color: $footer-font-black;
-    padding-bottom: calculateRem(5);
-    font-family: $font-family-Roboto;
-    font-size: $font-size-very-small;
-    transition: 0.2s linear;
-
-    &:hover {
-      color: $font-color-red;
-      border-bottom: 2px solid $font-color-red;
-      transition: 0.2s linear;
+      border-right: transparent;
     }
   }
 }
-
