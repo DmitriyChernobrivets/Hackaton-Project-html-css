@@ -265,6 +265,7 @@
     @media (max-width: 1200px) {
       width: 100%;
     }
+
   }
   .footer__news-sale:last-child {
     padding-bottom: 25px;
@@ -278,6 +279,42 @@
     position: relative;
     @media (max-width:768) {
       width: 162px;
+=======
+    .footer__block5 {
+      .footer__news-subtitle {
+        font-family: $font-family-Roboto;
+        font-size: 18px;
+        margin: 5px 0 43px;
+      }
+      .footer__news-sale {
+        padding-bottom: 15px;
+      }
+      .footer__news-sale:last-child {
+        padding-bottom: 25px;
+      }
+      .footer__news-button {
+        width: 200px;
+        height: 45px;
+        background-color: $footer-black;
+        border: none;
+        color: $font-color-white;
+        position: relative;
+        cursor: pointer;
+      }
+      .footer__news-button::before {
+        content: "";
+        display: block;
+        background-image: url(../img/paper-airplane-outline.png);
+        width: 42px;
+        height: inherit;
+        position: absolute;
+        top:0;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-right: 2px solid $footer-font-black;
+        cursor: pointer;
+      }
+
     }
   }
   .footer__news-button::before {

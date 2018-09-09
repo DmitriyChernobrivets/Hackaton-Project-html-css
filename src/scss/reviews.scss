@@ -1,0 +1,132 @@
+.wrapper-review {
+
+    width: 43%;
+    margin: 0 auto;
+    padding: 85px 0;
+    .review-head {
+        text-align: center;
+        margin-bottom: 80px;
+        &_top {
+            text-transform: uppercase;
+            font-size: 18px;
+            font-family: $font-family-Roboto;
+            font-weight: 200;
+            padding: 30px 0;
+        }
+        &_discription {
+            font-size: 16px;
+            padding-bottom: 40px;
+        }
+        &_btn {
+            padding: 15px 40px;
+            background-color: transparent;
+            border: 1px solid $footer-font-black;
+            cursor: pointer;
+            transition: .2s linear;
+            &:hover {
+                color: $font-color-red;
+                border-color: $font-color-red;
+                transition: .2s linear;
+            }
+        }
+    }
+    .review-main {
+        display: flex;
+        @media (max-width: 1200px) {
+            flex-direction: column;
+        }
+        &:not(:first-child) {
+            border-top: 1px solid $footer-font-black;
+        }
+        &_navigation {
+            padding-top: 70px;
+            .navigation_list {
+                list-style: none;
+                display: flex;
+                width: 20%;
+                margin: 0 auto;
+                @media (max-width: 1200px) {
+                    width: 50%;
+                }
+            }
+            .navigation_item {
+                &:not(:last-child) {
+                    margin-right: 15px;
+                }
+                &:first-child {
+                    margin-right: 35px;
+                }
+                &:last-child {
+                    margin-left: 20px;
+                }
+                .link {
+                    font-size: 14px;
+                    font-family: $font-family-Roboto;
+                    &:hover {
+                        color: black;
+                    }
+                    &:hover .svg {
+                        fill: black;
+                    }
+                    color: $footer-font-black;
+                    .svg {
+                        fill: $footer-font-black;
+                    }
+                }
+            }
+        }
+        
+
+        padding: 40px 0;
+        &_post {
+            .post {
+                font-size: 16px;
+                line-height: 2;
+                font-family: $font-family-Roboto;
+                margin-bottom: 20px;
+            }
+            .rvw-btn {
+                border: none;
+                background-color: transparent;
+                color: $font-color-red;               
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+        &_user-info {
+            width: 25%;
+            @media (max-width: 1200px) {
+                width: 100%;
+            }
+            .user-info {
+                text-transform: uppercase;
+                margin-bottom: 18px;
+            }
+            .post-date {
+                font-size: $font-size-very-small;
+                margin-bottom: 16px;
+ 
+            }
+            .sale-acception {
+                margin-bottom: 16px;
+                &_svg {
+                    margin-right: 5px;
+                    
+                }
+            }
+        }
+        .stars-svg {
+            fill: $font-color-red;
+            cursor: pointer;
+            &:hover {
+                fill: #e9b90e;
+            }
+        }
+        &_post {
+            width: 70%;
+            @media (max-width: 1200px) {
+                width: 100%;
+            }
+        }
+    }
+}
