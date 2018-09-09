@@ -1,3 +1,291 @@
+
+.wrapper {
+  max-width: 83.3333%;
+  margin: 0 auto;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.btn {
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.wrapper-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: calculateRem(31);
+  padding-bottom: calculateRem(31);
+}
+
+.header {
+  color: $font-color-white;
+  background-color: $color-background;
+}
+
+.link-logo {
+  color: $font-color-white;
+  font-family: $font-family-CormorantUnicase-Regular;
+  font-size: $font-size-large;
+  @media screen and (max-width: 900px) {
+    font-size: 22px;
+  }
+}
+
+.logo {
+  flex-basis: 25%;
+  @media screen and (max-width: 1100px) {
+    flex-basis: 35%;
+  }
+  @media screen and (max-width: 768px) {
+    flex-basis: 100%;
+    margin-bottom: calculateRem(30);
+    text-align: center;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  flex-basis: 50%;
+  @media screen and (max-width: 1100px) {
+    flex-basis: 65%;
+    justify-content: flex-end;
+  }
+  @media screen and (max-width: 768px) {
+    flex-basis: 100%;
+    justify-content: center;
+  }
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
+  &__item {
+    margin-right: calculateRem(40);
+    position: relative;
+    @media screen and (max-width: 900px) {
+      margin-right: calculateRem(25);
+    }
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      margin-right: calculateRem(0);
+      margin-bottom: calculateRem(10);
+    }
+  }
+
+  &__item:last-child {
+    margin-right: 0px;
+    @media screen and (max-width: 500px) {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__item--active::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: #ddd;
+    position: absolute;
+    margin-top: calculateRem(7);
+  }
+
+  &__item--active:hover::after,
+  &__item--active:focus::after {
+    width: 100%;
+    @media screen and (max-width: 500px) {
+      width: 0%;
+    }
+  }
+  &__item--active:hover &__link,
+  &__item--active:focus &__link {
+    @media screen and (max-width: 500px) {
+      color: $font-color-red;
+    }
+  }
+
+  &__select {
+    color: $font-color-white;
+    background-color: #000;
+    font-size: $font-size-very-small;
+    font-family: $font-family-Roboto;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+  }
+  &__select:hover,
+  &__select:focus {
+    @media screen and (max-width: 500px) {
+      color: $font-color-red;
+    }
+  }
+
+  &__link {
+    font-size: $font-size-very-small;
+    font-family: $font-family-Roboto;
+    color: $font-color-white;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  &__link--decor::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    border-color: #686868 transparent transparent transparent;
+    margin-left: calculateRem(14);
+  }
+}
+
+.au-form {
+  display: flex;
+  align-items: center;
+  flex-basis: 25%;
+  justify-content: flex-end;
+  @media screen and (max-width: 1100px) {
+    flex-basis: 100%;
+    justify-content: center;
+    margin-top: calculateRem(30);
+  }
+
+  &__btn-login,
+  &__btn-reg {
+    color: $font-color-white;
+    position: relative;
+  }
+  &__btn-login {
+    margin-right: calculateRem(10);
+    padding-left: calculateRem(30);
+  }
+  &__btn-reg {
+    margin-right: calculateRem(29);
+  }
+
+  &__btn-login::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/profile.png");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-2px);
+  }
+  &__btn-reg::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: $font-color-grey;
+    margin-right: calculateRem(9);
+  }
+
+  &__btn-like {
+    width: 16px;
+    height: 15px;
+    margin-right: calculateRem(29);
+  }
+
+  &__btn-inbox {
+    width: 14px;
+    height: 15px;
+  }
+
+  &__icon-like,
+  &__icon-inbox {
+    fill: $font-color-grey;
+    text-align: center;
+  }
+
+  &__icon-like {
+    width: 16px;
+    height: 15px;
+  }
+
+  &__icon-inbox {
+    width: 14px;
+    height: 15px;
+  }
+
+  &__btn-inbox,
+  &__btn-like {
+    position: relative;
+  }
+
+  &__notification {
+    font-size: $font-size-very-very-small;
+    position: absolute;
+    color: $font-color-grey;
+    right: 0;
+    transform: translate(6px, -6px);
+  }
+  &__btn-login--active:hover,
+  &__btn-reg--active:hover,
+  &__btn-login--active:focus,
+  &__btn-reg--active:focus {
+    color: $font-color-red;
+    transition: all 0.2s ease-in;
+  }
+  &__btn-like--active:hover &__icon-like,
+  &__btn-inbox--active:hover &__icon-inbox,
+  &__btn-like--active:focus &__icon-like,
+  &__btn-inbox--active:focus &__icon-inbox {
+    transform: scale(1.2);
+    fill: $font-color-red;
+    transition: all 0.2s ease-in;
+  }
+}
+
+.header-bottom {
+  display: flex;
+  margin-bottom: calculateRem(40);
+
+  &__select {
+    border: 1px solid $footer-font-black;
+    color: $footer-font-black;
+    padding: calculateRem(20) calculateRem(15);
+    flex-grow: 1;
+    font-family: $font-family-Roboto;
+    font-size: $font-size-very-small;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      border-right: transparent;
+    }
+  }
+
+  &__select-reset {
+    border-bottom: 2px solid $font-color-main;
+    color: $footer-font-black;
+    padding-bottom: calculateRem(5);
+    font-family: $font-family-Roboto;
+    font-size: $font-size-very-small;
+    transition: 0.2s linear;
+
+    &:hover {
+      color: $font-color-red;
+      border-bottom: 2px solid $font-color-red;
+      transition: 0.2s linear;
+    }
+  }
+}
+=======
 .list {
   list-style: none;
   margin: 0;
@@ -255,3 +543,4 @@
     }
   }
 }
+
