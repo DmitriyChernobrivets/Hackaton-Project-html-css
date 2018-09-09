@@ -1,3 +1,8 @@
+.wrapper {
+  max-width: 83.3333%;
+  margin: 0 auto;
+}
+
 .list {
   list-style: none;
   margin: 0;
@@ -29,29 +34,60 @@
   background-color: $color-background;
 }
 
-.wrapper-logo-menu {
-  flex-basis: 75%;
-  display: flex;
-  justify-content: space-between;
-}
-
 .link-logo {
   color: $font-color-white;
   font-family: $font-family-CormorantUnicase-Regular;
   font-size: $font-size-large;
+  @media screen and (max-width: 900px) {
+    font-size: 22px;
+  }
+}
+
+.logo {
+  flex-basis: 25%;
+  @media screen and (max-width: 1100px) {
+    flex-basis: 35%;
+  }
+  @media screen and (max-width: 768px) {
+    flex-basis: 100%;
+    margin-bottom: calculateRem(30);
+    text-align: center;
+  }
 }
 
 .menu {
   display: flex;
   align-items: center;
-
+  flex-basis: 50%;
+  @media screen and (max-width: 1100px) {
+    flex-basis: 65%;
+    justify-content: flex-end;
+  }
+  @media screen and (max-width: 768px) {
+    flex-basis: 100%;
+    justify-content: center;
+  }
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
   &__item {
     margin-right: calculateRem(40);
     position: relative;
+    @media screen and (max-width: 900px) {
+      margin-right: calculateRem(25);
+    }
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      margin-right: calculateRem(0);
+      margin-bottom: calculateRem(10);
+    }
   }
 
   &__item:last-child {
     margin-right: 0px;
+    @media screen and (max-width: 500px) {
+      margin-bottom: 0px;
+    }
   }
 
   &__item--active::after {
@@ -64,8 +100,18 @@
     margin-top: calculateRem(7);
   }
 
-  &__item--active:hover::after {
+  &__item--active:hover::after,
+  &__item--active:focus::after {
     width: 100%;
+    @media screen and (max-width: 500px) {
+      width: 0%;
+    }
+  }
+  &__item--active:hover &__link,
+  &__item--active:focus &__link {
+    @media screen and (max-width: 500px) {
+      color: $font-color-red;
+    }
   }
 
   &__select {
@@ -76,6 +122,12 @@
     text-transform: uppercase;
     border: none;
     outline: none;
+  }
+  &__select:hover,
+  &__select:focus {
+    @media screen and (max-width: 500px) {
+      color: $font-color-red;
+    }
   }
 
   &__link {
@@ -101,7 +153,13 @@
 .au-form {
   display: flex;
   align-items: center;
-  flex-basis: 222px;
+  flex-basis: 25%;
+  justify-content: flex-end;
+  @media screen and (max-width: 1100px) {
+    flex-basis: 100%;
+    justify-content: center;
+    margin-top: calculateRem(30);
+  }
 
   &__btn-login,
   &__btn-reg {
@@ -177,12 +235,16 @@
     transform: translate(6px, -6px);
   }
   &__btn-login--active:hover,
-  &__btn-reg--active:hover {
+  &__btn-reg--active:hover,
+  &__btn-login--active:focus,
+  &__btn-reg--active:focus {
     color: $font-color-red;
     transition: all 0.2s ease-in;
   }
   &__btn-like--active:hover &__icon-like,
-  &__btn-inbox--active:hover &__icon-inbox {
+  &__btn-inbox--active:hover &__icon-inbox,
+  &__btn-like--active:focus &__icon-like,
+  &__btn-inbox--active:focus &__icon-inbox {
     transform: scale(1.2);
     fill: $font-color-red;
     transition: all 0.2s ease-in;

@@ -12,24 +12,14 @@ $font-size-small: 13px;
 $font-size-very-small: 12px;
 $font-size-very-very-small: 10px;
 $color-background: black;
-$font-family-Roboto: 'Roboto',
-Arial,
-sans-serif;
-$font-family-Roboto-Medium: 'Roboto-Medium',
-Arial,
-sans-serif;
-$font-family-CormorantUnicase-Regular: 'CormorantUnicase-Regular',
-Arial,
-sans-serif;
-$font-family-CormorantUnicase-Bold: 'CormorantUnicase-Bold',
-Arial,
-sans-serif;
-$font-family-Roboto-Bold: 'Roboto-Bold',
-Arial,
-sans-serif;
-
+$font-family-Roboto: "Roboto", Arial, sans-serif;
+$font-family-Roboto-Medium: "Roboto-Medium", Arial, sans-serif;
+$font-family-CormorantUnicase-Regular: "CormorantUnicase-Regular", Arial,
+  sans-serif;
+$font-family-CormorantUnicase-Bold: "CormorantUnicase-Bold", Arial, sans-serif;
+$font-family-Roboto-Bold: "Roboto-Bold", Arial, sans-serif;
 
 @function calculateRem($size) {
-    $remSize: $size / 16;
-    @return #{$remSize}rem;
-    }
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}
