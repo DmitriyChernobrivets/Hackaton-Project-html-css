@@ -1,9 +1,11 @@
 .footer {
   background-color: $footer-background;
   color: $footer-black;
+
   .wrapper {
     width: 83.33333%;
   }
+
   .block {
     padding: calculateRem(105) 0 calculateRem(77);
     margin: 0 auto;
@@ -17,24 +19,26 @@
       text-align: center;
     }
   }
+
   .footer__block {
     @media (max-width: 768px) {
       padding-bottom: calculateRem(75);
       width: 50%;
       margin: 0 auto;
-      
     }
     @media (max-width: 1200px) {
       width: 33.3%;
       padding-bottom: calculateRem(100);
     }
   }
+
   .footer__title {
     font-size: $font-size-large;
     font-family: $font-family-CormorantUnicase-Regular;
     text-transform: uppercase;
     margin-bottom: calculateRem(42);
   }
+
   .footer__info-production {
     font-family: $font-family-Roboto;
     font-size: calculateRem(12);
@@ -45,66 +49,83 @@
       width: 100%;
     }
   }
+
   .footer__info-contact {
     font-family: $font-family-Roboto;
     font-weight: bold;
     padding-bottom: calculateRem(12);
   }
+
   .footer__info-contact:last-child {
     padding-bottom: 0;
   }
+
   .footer__subtitle-about {
     font-family: $font-family-Roboto;
     font-size: calculateRem(18);
     padding: calculateRem(5) 0 calculateRem(43);
   }
+
   .footer__about-list {
     list-style: none;
   }
+
   .footer__about-link {
     color: $footer-black;
   }
+
   .footer__about-item {
     margin-bottom: calculateRem(12);
   }
+
   .footer__about-link:hover {
     text-decoration: underline;
   }
+
   .footer__questions-subtitle {
     font-family: $font-family-Roboto;
     font-size: calculateRem(18);
     margin: calculateRem(5) 0 calculateRem(43);
   }
+
   .footer__questions-list {
     list-style: none;
   }
+
   .footer__questions-link {
     color: $footer-black;
   }
+
   .footer__questions-item {
     margin-bottom: calculateRem(12);
   }
+
   .footer__questions-link:hover {
     text-decoration: underline;
   }
+
   .footer__join-subtitle {
     font-family: $font-family-Roboto;
     font-size: calculateRem(18);
     margin: calculateRem(5) 0 calculateRem(43);
   }
+
   .footer__join-svg {
     margin-right: calculateRem(18);
-    transition: .2s linear;
+    transition: 0.2s linear;
+
     &:hover {
       fill: $font-color-red;
-      transition: .2s linear;
+      transition: 0.2s linear;
     }
   }
+
   .footer__news-subtitle {
     font-family: $font-family-Roboto;
     font-size: calculateRem(18);
     margin: calculateRem(5) 0 calculateRem(43);
   }
+
   .footer__news-sale {
     padding-bottom: calculateRem(15);
     width: calculateRem(180);
@@ -112,77 +133,63 @@
     @media (max-width: 1200px) {
       width: 100%;
     }
-
   }
+
   .footer__news-sale:last-child {
     padding-bottom: calculateRem(25);
   }
-  .footer__news-button {
-    width: calculateRem(200);
-    height: calculateRem(45);
-    background-color: $footer-black;
-    border: none;
-    color: $font-color-white;
-    position: relative;
-    @media (max-width:768) {
-      width: calculateRem(162);
-    }
-    .footer__block5 {
-      .footer__news-subtitle {
-        font-family: $font-family-Roboto;
-        font-size: calculateRem(18);
-        margin: calculateRem(5) 0 calculateRem(43);
-      }
-      .footer__news-sale {
-        padding-bottom: calculateRem(15);
-      }
-      .footer__news-sale:last-child {
-        padding-bottom: calculateRem(25);
-      }
-      .footer__news-button {
-        width: calculateRem(200);
-        height: calculateRem(45);
-        background-color: $footer-black;
-        border: none;
-        color: $font-color-white;
-        position: relative;
-        cursor: pointer;
-      }
-      .footer__news-button::before {
-        content: "";
-        display: block;
-        background-image: url(../img/paper-airplane-outline.png);
-        width: calculateRem(42);
-        height: inherit;
-        position: absolute;
-        top:0;
-        background-repeat: no-repeat;
-        background-position: center;
-        border-right: 2px solid $footer-font-black;
-        cursor: pointer;
-      }
 
+  .footer__block5 {
+    .footer__news-subtitle {
+      font-family: $font-family-Roboto;
+      font-size: calculateRem(18);
+      margin: calculateRem(5) 0 calculateRem(43);
+    }
+
+    .footer__news-sale {
+      padding-bottom: calculateRem(15);
+    }
+
+    .footer__news-sale:last-child {
+      padding-bottom: calculateRem(25);
     }
   }
-  .footer__news-button::before {
-    content: "";
-    display: block;
-    background-image: url(../img/paper-airplane-outline.png);
-    width: calculateRem(42);
-    height: inherit;
-    position: absolute;
-    top: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-right: 2px solid $footer-font-black;
+}
+
+.block2 {
+  background-color: #222222;
+  display: flex;
+  text-align: center;
+
+  .block2__rights {
+    color: $font-color-white;
+    padding: calculateRem(20) 0 calculateRem(22);
   }
-  .block2 {
-    background-color: #222222;
-    display: flex;
-    text-align: center;
-    .block2__rights {
-      color: $font-color-white;
-      padding: calculateRem(20) 0 calculateRem(22);
-    }
-  }
+}
+
+.footer__news-button-plane {
+  height: calculateRem(45);
+  width: 25%;
+  border: none;
+  border-right: 1px solid $footer-font-black;
+  background-color: $footer-black;
+  background-image: url(../img/paper-airplane-outline.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.footer__news-btn {
+  margin: 0 auto;
+  width: 200px;
+  display: flex;
+}
+
+.footer__news-button {
+  width: 75%;
+  height: calculateRem(45);
+  background-color: $footer-black;
+  border: none;
+  color: $font-color-white;
+  cursor: pointer;
 }
