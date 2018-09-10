@@ -172,24 +172,12 @@
 
   &__btn-login {
     margin-right: calculateRem(10);
-    padding-left: calculateRem(30);
+    display: flex;
+    align-items: center;
   }
 
   &__btn-reg {
     margin-right: calculateRem(29);
-  }
-
-  &__btn-login::before {
-    content: '';
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-image: url('../img/profile.png');
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateY(-2px);
   }
 
   &__btn-reg::before {
@@ -226,6 +214,18 @@
   &__icon-inbox {
     width: 14px;
     height: 15px;
+  }
+
+  &__icon-profile {
+    width: 16px;
+    height: 16px;
+    fill: #ddd;
+    margin-right: calculateRem(12);
+  }
+  &__btn-login:hover &__icon-profile {
+    transform: scale(1.2);
+    fill: $font-color-red;
+    transition: all 0.2s ease-in;
   }
 
   &__btn-inbox,
@@ -287,8 +287,6 @@
       transition: 0.2s linear;
     }
   }
-
-
 
   &__select {
     border: 1px solid $footer-font-black;
