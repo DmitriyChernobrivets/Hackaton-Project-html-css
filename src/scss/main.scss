@@ -28,6 +28,7 @@
   }
   @media (min-width: 769px) and (max-width:1200px) {
     width: 30%;
+    margin-bottom: calculateRem(60);
   }
   @media (min-width: 769px) and (max-width:998px) {
     width: 45%;
