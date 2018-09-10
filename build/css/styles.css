@@ -581,27 +581,18 @@ a {
 
 .au-form__btn-login {
   margin-right: 0.625rem;
-  padding-left: 1.875rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .au-form__btn-reg {
   margin-right: 1.8125rem;
-}
-
-.au-form__btn-login::before {
-  content: '';
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-image: url("../img/profile.png");
-  -webkit-background-size: cover;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  transform: translateY(-2px);
 }
 
 .au-form__btn-reg::before {
@@ -638,6 +629,23 @@ a {
 .au-form__icon-inbox {
   width: 14px;
   height: 15px;
+}
+
+.au-form__icon-profile {
+  width: 16px;
+  height: 16px;
+  fill: #ddd;
+  margin-right: 0.75rem;
+}
+
+.au-form__btn-login:hover .au-form__icon-profile {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  fill: #e73331;
+  -webkit-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .au-form__btn-inbox,
