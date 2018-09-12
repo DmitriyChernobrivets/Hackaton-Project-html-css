@@ -193,3 +193,17 @@
   color: $font-color-white;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+   .footer__modifier:not(:last-child) {
+     margin-bottom: 25px;
+   } 
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+    .block {
+      flex-wrap: wrap;
+      
+    }
+    .footer__modifier {
+      flex-basis: 33.3%;
+    }
+}
