@@ -1,22 +1,155 @@
 'use strict';
 
+// // building select nav for mobile width only
+// $(function(){
+// 	// building select menu
+// 	$('<select />').appendTo('nav');
+
+// 	// building an option for select menu
+// 	$('<option />', {
+// 		'selected': 'selected',
+// 		'value' : '',
+// 		'text': 'Choise Page...'
+// 	}).appendTo('nav select');
+
+// 	$('nav ul li a').each(function(){
+// 		var target = $(this);
+
+// 		$('<option />', {
+// 			'value' : target.attr('href'),
+// 			'text': target.text()
+// 		}).appendTo('nav select');
+
+// 	});
+
+// 	// on clicking on link
+// 	$('nav select').on('change',function(){
+// 		window.location = $(this).find('option:selected').val();
+// 	});
+// });
+//end
+
+// show and hide sub menu
+$(function () {
+	$('nav ul li').hover(function () {
+		//show its submenu
+		$('ul', this).slideDown(150);
+	}, function () {
+		//hide its submenu
+		$('ul', this).slideUp(150);
+	});
+});
+//end
+
+// $(function () {
+// 	// building select menu
+// 	$('<select />').appendTo('nav');
+
+// 	// building an option for select menu
+// 	$('<option />', {
+// 		'selected': 'selected',
+// 		'value': '',
+// 		'text': 'Choise Page...'
+// 	}).appendTo('nav select');
+
+// 	$('nav ul li a').each(function () {
+// 		var target = $(this);
+
+// 		$('<option />', {
+// 			'value': target.attr('href'),
+// 			'text': target.text()
+// 		}).appendTo('nav select');
+
+// 	});
+
+// 	// on clicking on link
+// 	$('nav select').on('change', function () {
+// 		window.location = $(this).find('option:selected').val();
+// 	});
+// });
+
+// // show and hide sub menu
+// $(function () {
+// $('nav ul li').hover(
+// 	function () {
+// 		//show its submenu
+// 		$('ul', this).slideDown(150);
+// 	},
+// 	function () {
+// 		//hide its submenu
+// 		$('ul', this).slideUp(150);
+// 	}
+// );
+// });
+'use strict';
+
 $('#toggle').click(function () {
-  $(this).toggleClass('active');
-  $('#overlay').toggleClass('open');
+    $(this).toggleClass('active');
+    $('#overlay').toggleClass('open');
 });
 $('.menu-cont').on('click', function () {
 
-  var menu = $('.menu-txt').text();
-  var close = $('.menu-txt').attr('data-text');
+    var menu = $('.menu-txt').text();
+    var close = $('.menu-txt').attr('data-text');
 
-  $('.menu').toggleClass('active');
+    $('.menu').toggleClass('active');
 
-  if ($('.menu-txt').text(menu)) {
-    $('.menu-txt').text(close);
-  } else {
-    $('.menu-txt').text(menu);
-  }
-  $('.menu-txt').attr('data-text', menu);
+    if ($('.menu-txt').text(menu)) {
+        $('.menu-txt').text(close);
+    } else {
+        $('.menu-txt').text(menu);
+    }
+    $('.menu-txt').attr('data-text', menu);
+});
+
+/*
+Reference: http://jsfiddle.net/BB3JK/47/
+*/
+
+$('select').each(function () {
+    var $this = $(this),
+        numberOfOptions = $(this).children('option').length;
+
+    $this.addClass('select-hidden');
+    $this.wrap('<div class="select"></div>');
+    $this.after('<div class="select-styled"></div>');
+
+    var $styledSelect = $this.next('div.select-styled');
+    $styledSelect.text($this.children('option').eq(0).text());
+
+    var $list = $('<ul />', {
+        'class': 'select-options'
+    }).insertAfter($styledSelect);
+
+    for (var i = 0; i < numberOfOptions; i++) {
+        $('<li />', {
+            text: $this.children('option').eq(i).text(),
+            rel: $this.children('option').eq(i).val()
+        }).appendTo($list);
+    }
+
+    var $listItems = $list.children('li');
+
+    $styledSelect.click(function (e) {
+        e.stopPropagation();
+        $('div.select-styled.active').not(this).each(function () {
+            $(this).removeClass('active').next('ul.select-options').hide();
+        });
+        $(this).toggleClass('active').next('ul.select-options').toggle();
+    });
+
+    $listItems.click(function (e) {
+        e.stopPropagation();
+        $styledSelect.text($(this).text()).removeClass('active');
+        $this.val($(this).attr('rel'));
+        $list.hide();
+        //console.log($this.val());
+    });
+
+    $(document).click(function () {
+        $styledSelect.removeClass('active');
+        $list.hide();
+    });
 });
 "use strict";
 

@@ -8,6 +8,10 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+@import url(http://fonts.googleapis.com/css?family=Gentium+Basic:400,700|Yanone+Kaffeesatz);
+
 @import url(https://fonts.googleapis.com/css?family=Righteous);
 
 html {
@@ -434,6 +438,267 @@ a {
   src: url("../fonts/CormorantUnicase-Bold.woff") format("woff"), url("../fonts/CormorantUnicase-Bold.woff2") format("woff2");
 }
 
+h1 {
+  font-weight: normal;
+  font-size: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+h1 span {
+  font-size: 13px;
+  display: block;
+  padding-left: 4px;
+}
+
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+
+.select {
+  opacity: 0.8;
+  z-index: 60;
+  width: 50% !important;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 36px;
+  color: #212121;
+  height: 40px;
+  border: 1px solid #f3f3f3;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+}
+
+.select-styled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f7e5e0;
+  padding: 8px 15px;
+  -webkit-transition: all 0.2s, ease-in;
+  -o-transition: all 0.2s, ease-in;
+  transition: all 0.2s, ease-in;
+}
+
+.select-styled:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-color: #212121 transparent transparent transparent;
+  position: absolute;
+  top: 16px;
+  right: 10px;
+}
+
+.select-styled:hover {
+  background-color: #f5ded8;
+}
+
+.select-styled:active,
+.select-styled.active {
+  background-color: #f2d4cc;
+}
+
+.select-styled:active:after,
+.select-styled.active:after {
+  top: 9px;
+  border-color: transparent transparent #212121 transparent;
+}
+
+.select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #f2d4cc;
+}
+
+.select-options li {
+  margin: 0;
+  padding: 12px 0;
+  text-indent: 15px;
+  border-top: 1px solid #edc3b7;
+  -webkit-transition: all 0.2s, ease-in;
+  -o-transition: all 0.2s, ease-in;
+  transition: all 0.2s, ease-in;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+}
+
+.select-options li:hover {
+  color: #f7e5e0;
+  background: #212121;
+}
+
+.select-options li[rel="hide"] {
+  display: none;
+}
+
+.select-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.select-input {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px 50px;
+  font-size: 16px;
+  background-color: #f7e5e0;
+  border: none;
+  opacity: 0.8;
+  color: #212121;
+}
+
+/* CSS reset */
+
+/* Slider
+http://www.freshdesignweb.com/drop-down-responsive-menu-with-css3-and-jquery.html
+*/
+
+/*===== nav style ======*/
+
+#fdw nav select {
+  display: none;
+  /* this is just for the mobile display */
+}
+
+#fdw nav ul {
+  display: block;
+  z-index: 999999;
+}
+
+#fdw nav ul li {
+  display: inline-block;
+  padding: 20px 3px 10px;
+  margin-left: 30px;
+  position: relative;
+}
+
+#fdw nav ul li a:link,
+#fdw nav ul li a:visited {
+  color: white;
+  font: normal 20px 'Yanone Kaffeesatz', sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+}
+
+#fdw nav ul li a:hover,
+#fdw nav ul li a:active {
+  color: #e73331;
+  text-decoration: none;
+}
+
+#fdw nav ul li span {
+  position: absolute;
+  right: -12px;
+  bottom: 6px;
+  width: 7px;
+  height: 8px;
+  margin: 0 0 0 3px;
+  float: right;
+  display: block;
+  background: url("images/nav_arrow.png") no-repeat left -8px;
+  font: 0/0 a;
+}
+
+#fdw nav ul li.current {
+  border-bottom: 2px solid #e73331;
+}
+
+#fdw nav ul li.current a {
+  color: #e73331;
+  cursor: default;
+}
+
+#fdw nav ul li.current a span {
+  background: url("../images/nav_arrow.png") no-repeat left 0;
+}
+
+#fdw nav ul li.current ul li a {
+  cursor: pointer;
+}
+
+/*===== sub_menu Style =======*/
+
+#fdw nav ul li ul.sub_menu {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  border: 1px solid #ececec;
+  border-top: 5px solid #e73331;
+  display: none;
+  z-index: 999999;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 6px 7px #121012;
+  box-shadow: 0px 6px 7px #121012;
+}
+
+#fdw nav ul li ul.sub_menu li.arrow_top {
+  position: absolute;
+  top: -12px;
+  left: 12px;
+  width: 13px;
+  height: 8px;
+  display: block;
+  border: none;
+  background: url("images/arrow_top.png") no-repeat left top;
+}
+
+#fdw nav ul li ul.sub_menu li {
+  float: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #ececec;
+}
+
+#fdw nav ul li ul.sub_menu li a {
+  white-space: nowrap;
+  width: 150px;
+  padding: 12px;
+  font: 13px Arial, tahoma, sans-serif;
+  text-transform: capitalize;
+  color: #777;
+}
+
+#fdw nav ul li ul.sub_menu li a:hover {
+  background: #f9f9f9;
+  color: #333;
+}
+
+#fdw nav ul li ul.sub_menu li a.subCurrent {
+  color: #e73331;
+  cursor: default;
+}
+
+#fdw nav ul li ul.sub_menu li a.subCurrent:hover {
+  background: none;
+}
+
+/*===================== end Header style ======================*/
+
+/* All Mobile Sizes (devices and browser) */
+
 html,
 body {
   height: 100%;
@@ -460,6 +725,7 @@ body {
 }
 
 .menu-cont {
+  left: 50%;
   padding: 4px;
   cursor: pointer;
   z-index: 200;
@@ -476,9 +742,7 @@ body {
   font-family: 'Righteous';
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  background-image: -webkit-linear-gradient(#FA2300, #E1037C);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: White;
   cursor: pointer;
   z-index: 200;
 }
@@ -534,7 +798,6 @@ body {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  font-size: 50px;
   font-family: 'Righteous', serif;
   font-weight: 400;
   text-align: center;
@@ -569,6 +832,7 @@ body {
   -webkit-text-fill-color: transparent;
   text-decoration: none;
   overflow: hidden;
+  font-size: 50px;
   -webkit-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -655,19 +919,6 @@ body {
   }
 }
 
-p {
-  margin: 0;
-  padding: 0;
-  height: 170px;
-  white-space: nowrap;
-  overflow: hidden;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  background-image: -webkit-linear-gradient(#FA2300, #E1037C);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .wrapper {
   max-width: 83.3333%;
   margin: 0 auto;
@@ -703,6 +954,10 @@ p {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding-top: 1.9375rem;
   padding-bottom: 1.9375rem;
 }
@@ -1300,6 +1555,13 @@ p {
   cursor: pointer;
 }
 
+.footer__news-button-plane:hover {
+  color: #e73331;
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+}
+
 .footer__news-btn {
   margin: 0 auto;
   width: 200px;
@@ -1316,6 +1578,17 @@ p {
   border: none;
   color: #ffffff;
   cursor: pointer;
+}
+
+.footer__news-button:hover {
+  color: #e73331;
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.footer__modifier {
+  text-align: left;
 }
 
 .wrapper-review {
@@ -1544,6 +1817,14 @@ p {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  /* nav menu ul & select */
+
+  #fdw nav ul {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .menu-cont {
     display: block;
@@ -1590,6 +1871,10 @@ p {
 
   .footer__modifier:not(:last-child) {
     margin-bottom: 25px;
+  }
+
+  .footer__modifier {
+    text-align: center;
   }
 }
 

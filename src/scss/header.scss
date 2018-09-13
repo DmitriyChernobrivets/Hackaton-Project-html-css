@@ -25,6 +25,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
   padding-top: calculateRem(31);
   padding-bottom: calculateRem(31);
   @media (max-width: 768px) {

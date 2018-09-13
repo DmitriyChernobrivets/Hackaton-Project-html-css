@@ -177,6 +177,10 @@
   background-repeat: no-repeat;
   background-position: center center;
   cursor: pointer;
+  &:hover {
+    color: $font-color-red;
+    transition: .2s linear;
+  }
 }
 
 .footer__news-btn {
@@ -192,11 +196,18 @@
   border: none;
   color: $font-color-white;
   cursor: pointer;
+  &:hover {
+    color: $font-color-red;
+    transition: .2s linear;
+  }
 }
 @media (max-width: 768px) {
    .footer__modifier:not(:last-child) {
      margin-bottom: 25px;
    } 
+   .footer__modifier {
+    text-align: center;
+  }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
     .block {
@@ -205,4 +216,7 @@
     .footer__modifier {
       width: 33%;
     }
+}
+.footer__modifier {
+  text-align: left;
 }
