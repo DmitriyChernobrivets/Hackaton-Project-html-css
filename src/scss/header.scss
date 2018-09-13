@@ -27,6 +27,9 @@
   flex-wrap: wrap;
   padding-top: calculateRem(31);
   padding-bottom: calculateRem(31);
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .header {
@@ -59,6 +62,7 @@
   display: flex;
   align-items: center;
   flex-basis: 50%;
+
   @media screen and (max-width: 1200px) {
     flex-basis: 65%;
     justify-content: flex-end;
@@ -66,6 +70,8 @@
   @media screen and (max-width: 768px) {
     flex-basis: 100%;
     justify-content: center;
+    display: none;
+    align-items: center;
   }
   @media screen and (max-width: 500px) {
     flex-direction: column;
