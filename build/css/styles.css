@@ -479,7 +479,7 @@ a {
 .link-logo {
   color: #ffffff;
   font-family: "CormorantUnicase-Regular", Arial, sans-serif;
-  font-size: 33px;
+  font-size: 28px;
 }
 
 .logo {
@@ -529,7 +529,7 @@ a {
 .menu__select {
   color: #ffffff;
   background-color: #000;
-  font-size: 16px;
+  font-size: 12px;
   font-family: "Roboto", Arial, sans-serif;
   text-transform: uppercase;
   border: none;
@@ -537,7 +537,7 @@ a {
 }
 
 .menu__link {
-  font-size: 16px;
+  font-size: 12px;
   font-family: "Roboto", Arial, sans-serif;
   color: #ffffff;
   text-transform: uppercase;
@@ -654,7 +654,7 @@ a {
 }
 
 .au-form__notification {
-  font-size: 14px;
+  font-size: 10px;
   position: absolute;
   color: #dddddd;
   right: 0;
@@ -703,7 +703,7 @@ a {
   color: #979797;
   padding-bottom: 0.9375rem;
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
@@ -726,7 +726,7 @@ a {
   -ms-flex-positive: 1;
   flex-grow: 1;
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   text-transform: uppercase;
   background-color: #ecf2f6;
 }
@@ -1212,7 +1212,7 @@ a {
 }
 
 .wrapper-review .review-main_user-info .post-date {
-  font-size: 16px;
+  font-size: 12px;
   margin-bottom: 1rem;
 }
 
