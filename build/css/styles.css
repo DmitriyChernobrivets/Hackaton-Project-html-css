@@ -479,7 +479,7 @@ a {
 .link-logo {
   color: #ffffff;
   font-family: "CormorantUnicase-Regular", Arial, sans-serif;
-  font-size: 28px;
+  font-size: 33px;
 }
 
 .logo {
@@ -529,7 +529,7 @@ a {
 .menu__select {
   color: #ffffff;
   background-color: #000;
-  font-size: 12px;
+  font-size: 16px;
   font-family: "Roboto", Arial, sans-serif;
   text-transform: uppercase;
   border: none;
@@ -537,7 +537,7 @@ a {
 }
 
 .menu__link {
-  font-size: 12px;
+  font-size: 16px;
   font-family: "Roboto", Arial, sans-serif;
   color: #ffffff;
   text-transform: uppercase;
@@ -654,7 +654,7 @@ a {
 }
 
 .au-form__notification {
-  font-size: 10px;
+  font-size: 14px;
   position: absolute;
   color: #dddddd;
   right: 0;
@@ -703,7 +703,7 @@ a {
   color: #979797;
   padding-bottom: 0.9375rem;
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
@@ -726,18 +726,13 @@ a {
   -ms-flex-positive: 1;
   flex-grow: 1;
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   text-transform: uppercase;
   background-color: #ecf2f6;
 }
 
 .header-bottom__select:not(:last-child) {
   border-right: transparent;
-}
-
-.wrapper {
-  max-width: 83.3333%;
-  margin: 0 auto;
 }
 
 .main {
@@ -792,7 +787,7 @@ a {
 }
 
 .content-box__learn-txt {
-  font-size: 12px;
+  font-size: 16px;
   border-bottom: 1px solid black;
   font-family: "Roboto", Arial, sans-serif;
   -webkit-transition: .2s linear;
@@ -815,11 +810,19 @@ a {
   font-family: "Roboto", Arial, sans-serif;
 }
 
+.content-box__collection > p {
+  font-size: 1.5625rem;
+}
+
 .content-box__collection-name {
   margin-bottom: 0.9375rem;
   text-align: center;
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 13px;
+  font-size: 18px;
+}
+
+.content-box__collection-name > span {
+  font-size: 1.25rem;
 }
 
 .content-box__collection-name > :last-child {
@@ -829,6 +832,10 @@ a {
 
 .content-box__collection-price {
   text-align: center;
+}
+
+.content-box__collection-price > span {
+  font-size: 1.4375rem;
 }
 
 .content-box__collection-price__red {
@@ -888,19 +895,16 @@ a {
   color: #e73331;
   right: 1.5625rem;
   top: 1.5625rem;
-  padding: 1.875rem 1.25rem;
-  -webkit-border-radius: 60%;
-  border-radius: 60%;
+  padding: 2.1875rem 1.25rem;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
   background-color: #ffffff;
+  font-size: 1.5rem;
 }
 
 .footer {
   background-color: #efefef;
   color: #333333;
-}
-
-.footer .wrapper {
-  width: 83.33333%;
 }
 
 .footer .block {
@@ -920,7 +924,7 @@ a {
 }
 
 .footer .footer__title {
-  font-size: 28px;
+  font-size: 2.625rem;
   font-family: "CormorantUnicase-Regular", Arial, sans-serif;
   text-transform: uppercase;
   margin-bottom: 2.625rem;
@@ -928,10 +932,10 @@ a {
 
 .footer .footer__info-production {
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 0.75rem;
   width: 10.375rem;
   padding-bottom: 1.25rem;
   line-height: 2;
+  width: 100%;
 }
 
 .footer .footer__info-contact {
@@ -946,7 +950,7 @@ a {
 
 .footer .footer__subtitle-about {
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   padding: 0.3125rem 0 2.6875rem;
 }
 
@@ -956,6 +960,7 @@ a {
 
 .footer .footer__about-link {
   color: #333333;
+  font-size: 1.5rem;
 }
 
 .footer .footer__about-item {
@@ -968,7 +973,7 @@ a {
 
 .footer .footer__questions-subtitle {
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   margin: 0.3125rem 0 2.6875rem;
 }
 
@@ -978,6 +983,7 @@ a {
 
 .footer .footer__questions-link {
   color: #333333;
+  font-size: 1.5rem;
 }
 
 .footer .footer__questions-item {
@@ -990,15 +996,18 @@ a {
 
 .footer .footer__join-subtitle {
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   margin: 0.3125rem 0 2.6875rem;
 }
 
 .footer .footer__join-svg {
-  margin-right: 1.125rem;
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
+}
+
+.footer .footer__join-svg:not(:last-child) {
+  margin-right: 1.125rem;
 }
 
 .footer .footer__join-svg:hover {
@@ -1010,31 +1019,19 @@ a {
 
 .footer .footer__news-subtitle {
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 1.125rem;
-  margin: 0.3125rem 0 2.6875rem;
+  font-size: 1.5rem;
+  margin: 0.3125rem 0 1.4375rem;
 }
 
 .footer .footer__news-sale {
   padding-bottom: 0.9375rem;
   width: 11.25rem;
   line-height: 2;
+  font-size: 1.5rem;
+  width: 100%;
 }
 
 .footer .footer__news-sale:last-child {
-  padding-bottom: 1.5625rem;
-}
-
-.footer .footer__block5 .footer__news-subtitle {
-  font-family: "Roboto", Arial, sans-serif;
-  font-size: 1.125rem;
-  margin: 0.3125rem 0 2.6875rem;
-}
-
-.footer .footer__block5 .footer__news-sale {
-  padding-bottom: 0.9375rem;
-}
-
-.footer .footer__block5 .footer__news-sale:last-child {
   padding-bottom: 1.5625rem;
 }
 
@@ -1050,11 +1047,11 @@ a {
 .block2 .block2__rights {
   color: #ffffff;
   padding: 1.25rem 0 1.375rem;
+  font-size: 1.125rem;
 }
 
 .footer__news-button-plane {
-  height: 2.8125rem;
-  width: 25%;
+  padding: 15px 25px;
   border: none;
   border-right: 1px solid #979797;
   background-color: #333333;
@@ -1065,21 +1062,29 @@ a {
 }
 
 .footer__news-btn {
-  margin: 0 auto;
   width: 200px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 auto;
 }
 
 .footer__news-button {
-  width: 75%;
-  height: 2.8125rem;
   background-color: #333333;
   border: none;
+  padding: 10px 35px;
   color: #ffffff;
+  font-size: 1.5rem;
   cursor: pointer;
+}
+
+.footer__news-button:hover {
+  color: #e73331;
+}
+
+.footer__block1 > p {
+  font-size: 1.5rem;
 }
 
 .wrapper-review {
@@ -1205,7 +1210,7 @@ a {
 }
 
 .wrapper-review .review-main_user-info .post-date {
-  font-size: 12px;
+  font-size: 16px;
   margin-bottom: 1rem;
 }
 
@@ -1228,6 +1233,12 @@ a {
 
 .wrapper-review .review-main_post {
   width: 70%;
+}
+
+@media (min-width: 1200px) {
+  .footer__news-btn {
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -1267,14 +1278,6 @@ a {
   .footer .footer__block {
     width: 33.3%;
     padding-bottom: 6.25rem;
-  }
-
-  .footer .footer__info-production {
-    width: 100%;
-  }
-
-  .footer .footer__news-sale {
-    width: 100%;
   }
 
   .wrapper-review .review-main {
@@ -1345,6 +1348,10 @@ a {
     flex-direction: column;
     margin-bottom: 3.75rem;
     width: 80%;
+  }
+
+  .content-box__sale {
+    font-size: 1.125rem;
   }
 
   .footer .block {

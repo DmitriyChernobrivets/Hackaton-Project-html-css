@@ -2,9 +2,7 @@
   background-color: $footer-background;
   color: $footer-black;
 
-  .wrapper {
-    width: 83.33333%;
-  }
+
 
   .block {
     padding: calculateRem(105) 0 calculateRem(77);
@@ -33,7 +31,7 @@
   }
 
   .footer__title {
-    font-size: $font-size-large;
+    font-size: calculateRem(42);
     font-family: $font-family-CormorantUnicase-Regular;
     text-transform: uppercase;
     margin-bottom: calculateRem(42);
@@ -41,13 +39,11 @@
 
   .footer__info-production {
     font-family: $font-family-Roboto;
-    font-size: calculateRem(12);
+
     width: calculateRem(166);
     padding-bottom: calculateRem(20);
     line-height: 2;
-    @media (max-width: 1200px) {
-      width: 100%;
-    }
+    width: 100%;
   }
 
   .footer__info-contact {
@@ -62,7 +58,7 @@
 
   .footer__subtitle-about {
     font-family: $font-family-Roboto;
-    font-size: calculateRem(18);
+    font-size: calculateRem(24);
     padding: calculateRem(5) 0 calculateRem(43);
   }
 
@@ -72,6 +68,7 @@
 
   .footer__about-link {
     color: $footer-black;
+    font-size: calculateRem(24);
   }
 
   .footer__about-item {
@@ -84,7 +81,7 @@
 
   .footer__questions-subtitle {
     font-family: $font-family-Roboto;
-    font-size: calculateRem(18);
+    font-size: calculateRem(24);
     margin: calculateRem(5) 0 calculateRem(43);
   }
 
@@ -94,6 +91,7 @@
 
   .footer__questions-link {
     color: $footer-black;
+    font-size: calculateRem(24);
   }
 
   .footer__questions-item {
@@ -106,14 +104,15 @@
 
   .footer__join-subtitle {
     font-family: $font-family-Roboto;
-    font-size: calculateRem(18);
+    font-size: calculateRem(24);
     margin: calculateRem(5) 0 calculateRem(43);
   }
 
   .footer__join-svg {
-    margin-right: calculateRem(18);
+    &:not(:last-child) {
+      margin-right: calculateRem(18);
+    }
     transition: 0.2s linear;
-
     &:hover {
       fill: $font-color-red;
       transition: 0.2s linear;
@@ -122,38 +121,23 @@
 
   .footer__news-subtitle {
     font-family: $font-family-Roboto;
-    font-size: calculateRem(18);
-    margin: calculateRem(5) 0 calculateRem(43);
+    font-size: calculateRem(24);
+    margin: calculateRem(5) 0 calculateRem(23);
   }
 
   .footer__news-sale {
     padding-bottom: calculateRem(15);
     width: calculateRem(180);
     line-height: 2;
-    @media (max-width: 1200px) {
-      width: 100%;
-    }
+    font-size: calculateRem(24);
+    width: 100%;
+
   }
 
   .footer__news-sale:last-child {
     padding-bottom: calculateRem(25);
   }
 
-  .footer__block5 {
-    .footer__news-subtitle {
-      font-family: $font-family-Roboto;
-      font-size: calculateRem(18);
-      margin: calculateRem(5) 0 calculateRem(43);
-    }
-
-    .footer__news-sale {
-      padding-bottom: calculateRem(15);
-    }
-
-    .footer__news-sale:last-child {
-      padding-bottom: calculateRem(25);
-    }
-  }
 }
 
 .block2 {
@@ -164,12 +148,13 @@
   .block2__rights {
     color: $font-color-white;
     padding: calculateRem(20) 0 calculateRem(22);
+    font-size: calculateRem(18);
   }
 }
 
 .footer__news-button-plane {
-  height: calculateRem(45);
-  width: 25%;
+
+  padding: 15px 25px;
   border: none;
   border-right: 1px solid $footer-font-black;
   background-color: $footer-black;
@@ -177,21 +162,28 @@
   background-repeat: no-repeat;
   background-position: center center;
   cursor: pointer;
+
 }
 
 .footer__news-btn {
-  margin: 0 auto;
   width: 200px;
   display: flex;
+  margin: 0 auto;
+  @media (min-width: 1200px) {
+    margin: 0;
+  }
 }
 
 .footer__news-button {
-  width: 75%;
-  height: calculateRem(45);
   background-color: $footer-black;
   border: none;
+  padding: 10px 35px;
   color: $font-color-white;
+  font-size: calculateRem(24);
   cursor: pointer;
+  &:hover {
+    color: $font-color-red;
+  }
 }
 @media (max-width: 768px) {
    .footer__modifier:not(:last-child) {
@@ -205,4 +197,7 @@
     .footer__modifier {
       width: 33%;
     }
+}
+.footer__block1 > p{
+  font-size: calculateRem(24);
 }
