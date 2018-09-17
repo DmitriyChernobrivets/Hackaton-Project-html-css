@@ -10,8 +10,11 @@
   justify-content: space-between;
 }
 
-.content-box:not(:nth-child(n+8)) {
+.content-box:not(:nth-child(n+10)) {
   margin-bottom: calculateRem(60);
+  @media (min-width: 769px) and (max-width:998px) {
+
+  }
 }
 .content-box {
   width: 23%;
@@ -50,8 +53,10 @@
   }
 
   &__learn-txt {
-    font-size: $font-size-very-small;
-    
+    font-size: calculateRem(15);
+    @media (min-width: 769px) {
+      font-size: calculateRem(18);
+    }
     border-bottom: 1px solid black;
     font-family: $font-family-Roboto;
     transition: .2s linear;
@@ -64,24 +69,28 @@
   }
 
   &__collection {
-    margin-bottom: calculateRem(10);
+    margin-bottom: calculateRem(18);
     text-align: center;
     text-transform: uppercase;
     font-family: $font-family-Roboto;
+    
     & > p {
-      font-size: calculateRem(25);
+      font-size:  calculateRem(16);
+      @media (min-width: 768px) {
+        font-size: calculateRem(20);
+      }
     }
   }
 
   &__collection-name {
     margin-bottom: calculateRem(15);
     text-align: center;
-    
-    
     font-family: $font-family-Roboto;
-    font-size: $font-size-small;
     & > span {
-      font-size: calculateRem(20);
+      font-size: calculateRem(16);
+      @media (min-width: 768px) {
+        font-size: calculateRem(20);
+      }
     }
     >:last-child {
       border-left: 1px solid $footer-background;
@@ -92,7 +101,10 @@
   &__collection-price {
     text-align: center;
   & > span {
-    font-size: calculateRem(23);
+    font-size: calculateRem(16);
+    @media (min-width: 768px) {
+      font-size: calculateRem(20);
+    }
   }
     &__red {
       color: $font-color-red;
@@ -139,7 +151,7 @@
     border-radius: 50%;
     background-color: $font-color-white;
     font-size: calculateRem(24);
-    @media (max-width: 768px) {
+    @media (min-width: 768px) {
       font-size: calculateRem(18);
     }
   }

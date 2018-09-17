@@ -68,7 +68,7 @@
 
   .footer__about-link {
     color: $footer-black;
-    font-size: calculateRem(24);
+    font-size: calculateRem(20);
   }
 
   .footer__about-item {
@@ -91,7 +91,7 @@
 
   .footer__questions-link {
     color: $footer-black;
-    font-size: calculateRem(24);
+    font-size: calculateRem(20);
   }
 
   .footer__questions-item {
@@ -129,9 +129,11 @@
     padding-bottom: calculateRem(15);
     width: calculateRem(180);
     line-height: 2;
-    font-size: calculateRem(24);
+    
     width: 100%;
-
+    & > p {
+      font-size: calculateRem(20);
+    }
   }
 
   .footer__news-sale:last-child {
@@ -199,5 +201,5 @@
     }
 }
 .footer__block1 > p{
-  font-size: calculateRem(24);
+  font-size: calculateRem(18);
 }
