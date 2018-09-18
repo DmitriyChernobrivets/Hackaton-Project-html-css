@@ -12,8 +12,22 @@
     }
   }
   &__box {
-    
+    @media (min-width: 769px) and (max-width: 1000px) {
+      flex-basis: 30%;
+      
+    }
+    &:not(:nth-child(n+4)) {
+      @media (min-width: 769px) and (max-width: 1000px) { 
+        margin-bottom: calculateRem(30);
+      }
+    }
     flex-basis: 20%;
+  &:not(:last-child) {
+    @media (max-width: 768px) {
+      margin-bottom: calculateRem(30);
+  
+    }
+  }  
     &--head {
       font-family: $font-family-Roboto;
       font-size: calculateRem(18);
@@ -29,12 +43,20 @@
     }
     &--item {
       width: 70%;
+      @media (max-width: 480px) {
+        width: 100%;
+        text-align: center;
+      }
       &:not(:last-child) {
         margin-bottom: 10px;
+
       }
     
       &:first-child {
         margin-bottom: calculateRem(41);
+      }
+      @media (max-width: 480px) {
+        text-align: center;
       }
       
     }
@@ -44,6 +66,7 @@
       font-family: $font-family-Roboto;
       line-height: 15px;
       transition: .2s linear;
+      
     }
     &--link:hover {
       border-bottom: 1px solid black;
@@ -55,6 +78,7 @@
       border: none;
       cursor: pointer;
       color: #fff;
+      
       &.join {
         padding: 16px 36px;
         border-left: 1px solid $footer-font-black;
@@ -78,15 +102,39 @@
   
   &__flex {
     display: flex;
+    @media (max-width: 480px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (min-width: 481px) and (max-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @media (min-width: 769px) and (max-width: 1000px) {
+
+      flex-wrap: wrap;
+    }
   }
 }
 .foo__btn {
   display: flex;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+}
+.footer__box:nth-child(2) {
+  @media (min-width: 481px) and (max-width: 768px) {
+    flex-basis: 30%;
+  }
 }
 .footer__box:nth-child(2){
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  @media (max-width: 480px) {
+    align-items: unset;
+  }
 }
 .footer__box:nth-child(4) > a:not(:last-child) {
   margin-right: 20px;
@@ -98,3 +146,6 @@
 .footer__box:nth-child(5) li > p {
   margin-bottom: calculateRem(25);
 }
+// @media (min-width: 481px) and (max-width: 768px) {
+
+// }

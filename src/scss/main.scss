@@ -12,24 +12,22 @@
 
 .content-box:not(:nth-child(n+10)) {
   margin-bottom: calculateRem(60);
-  @media (min-width: 769px) and (max-width:998px) {
 
-  }
 }
 .content-box {
   width: 23%;
   min-height: 100px;
   margin: 0 auto;
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     flex-direction: column;
     margin-bottom: calculateRem(60);
-    width: 80%;
+    width: 60%;
   }
-  @media (min-width: 769px) and (max-width:1200px) {
+  @media (min-width: 769px) and (max-width:1000px) {
     width: 30%;
   }
-  @media (min-width: 769px) and (max-width:998px) {
+  @media (min-width: 489px) and (max-width:768px) {
     width: 45%;
   }
   &__float-btn {
@@ -59,12 +57,14 @@
     font-weight: 500;
     transition: .2s linear;
     padding-top: 5px;
+    @media (min-width: 1000px) {
+      font-size: calculateRem(14);
+    }
     &:hover {
       color: $font-color-red;
       transition: .2s linear;
       border-bottom: 1px solid $font-color-red;
     }
-    
   }
 
   &__collection {
@@ -75,6 +75,9 @@
     
     & > p {
       font-size:  calculateRem(13);
+      @media (min-width: 1000px) {
+        font-size: calculateRem(15);
+      }
     }
   }
 
@@ -84,6 +87,9 @@
     font-family: $font-family-Roboto;
     & > span {
       font-size: calculateRem(13);
+      @media (min-width: 1000px) {
+        font-size: calculateRem(15);
+      }
     }
     >:last-child {
       border-left: 1px solid $footer-background;
@@ -95,7 +101,9 @@
     text-align: center;
   & > span {
     font-size: calculateRem(13);
-   
+    @media (min-width: 1000px) {
+      font-size: calculateRem(15);
+    }
   }
     &__red {
       color: $font-color-red;
@@ -117,7 +125,7 @@
     width: 100%;
     opacity: 0;
     transition: .2s linear;
-
+    
     .btn {
       border-radius: 20%;
       height: calculateRem(30);
@@ -145,3 +153,6 @@
     
   }
 }
+// @media (min-width: 1000px) {
+//   font-size: 
+// }
