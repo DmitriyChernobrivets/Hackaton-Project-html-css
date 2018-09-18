@@ -52,7 +52,6 @@
 
   &__learn-txt {
     font-size: calculateRem(12);
-    border-bottom: 1px solid black;
     font-family: $font-family-Roboto;
     font-weight: 500;
     transition: .2s linear;
@@ -63,7 +62,8 @@
     &:hover {
       color: $font-color-red;
       transition: .2s linear;
-      border-bottom: 1px solid $font-color-red;
+      text-decoration: underline;
+
     }
   }
 
@@ -136,7 +136,6 @@
       &:hover {
         fill: $font-color-red;
         transition: .2s linear;
-        transform: scale(1.2);
       }
     }
   }

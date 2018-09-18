@@ -802,7 +802,6 @@ a {
 
 .content-box__learn-txt {
   font-size: 0.75rem;
-  border-bottom: 1px solid black;
   font-family: "Roboto-light", Arial, sans-serif;
   font-weight: 500;
   -webkit-transition: .2s linear;
@@ -816,7 +815,7 @@ a {
   -webkit-transition: .2s linear;
   -o-transition: .2s linear;
   transition: .2s linear;
-  border-bottom: 1px solid #e73331;
+  text-decoration: underline;
 }
 
 .content-box__collection {
@@ -900,9 +899,6 @@ a {
   -webkit-transition: .2s linear;
   -o-transition: .2s linear;
   transition: .2s linear;
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
 }
 
 .content-box__sale {
