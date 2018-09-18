@@ -12,7 +12,7 @@
     }
   }
   &__box {
-    @media (min-width: 769px) and (max-width: 1000px) {
+    @media (min-width: 481px) and (max-width: 1000px) {
       flex-basis: 30%;
       
     }
@@ -102,6 +102,7 @@
   
   &__flex {
     display: flex;
+    justify-content: space-between;
     @media (max-width: 480px) {
       flex-direction: column;
       align-items: center;
@@ -109,12 +110,11 @@
     @media (min-width: 481px) and (max-width: 768px) {
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
     }
     @media (min-width: 769px) and (max-width: 1000px) {
-
       flex-wrap: wrap;
     }
+    
   }
 }
 .foo__btn {
@@ -146,6 +146,3 @@
 .footer__box:nth-child(5) li > p {
   margin-bottom: calculateRem(25);
 }
-// @media (min-width: 481px) and (max-width: 768px) {
-
-// }
