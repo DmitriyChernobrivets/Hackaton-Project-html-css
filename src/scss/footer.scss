@@ -1,205 +1,100 @@
 .footer {
   background-color: $footer-background;
-  color: $footer-black;
-
-
-
-  .block {
-    padding: calculateRem(105) 0 calculateRem(77);
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
-    @media (max-width: 1200px) {
+  & .wrapper {
+    padding: calculateRem(105) 0 calculateRem(75) 0;
+  }
+  &__bottom {
+    background-color: #222;
+    padding: calculateRem(19) 0;
+    &--copyright {
+      color: #666666;
       text-align: center;
     }
   }
-
-  .footer__block {
-    @media (max-width: 768px) {
-      padding-bottom: calculateRem(75);
-      width: 50%;
-      margin: 0 auto;
-    }
-    @media (max-width: 1200px) {
-      width: 33.3%;
-      padding-bottom: calculateRem(100);
-    }
-  }
-
-  .footer__title {
-    font-size: calculateRem(42);
-    font-family: $font-family-CormorantUnicase-Regular;
-    text-transform: uppercase;
-    margin-bottom: calculateRem(42);
-  }
-
-  .footer__info-production {
-    font-family: $font-family-Roboto;
-
-    width: calculateRem(166);
-    padding-bottom: calculateRem(20);
-    line-height: 2;
-    width: 100%;
-  }
-
-  .footer__info-contact {
-    font-family: $font-family-Roboto;
-    font-weight: bold;
-    padding-bottom: calculateRem(12);
-  }
-
-  .footer__info-contact:last-child {
-    padding-bottom: 0;
-  }
-
-  .footer__subtitle-about {
-    font-family: $font-family-Roboto;
-    font-size: calculateRem(24);
-    padding: calculateRem(5) 0 calculateRem(43);
-  }
-
-  .footer__about-list {
-    list-style: none;
-  }
-
-  .footer__about-link {
-    color: $footer-black;
-    font-size: calculateRem(20);
-  }
-
-  .footer__about-item {
-    margin-bottom: calculateRem(12);
-  }
-
-  .footer__about-link:hover {
-    text-decoration: underline;
-  }
-
-  .footer__questions-subtitle {
-    font-family: $font-family-Roboto;
-    font-size: calculateRem(24);
-    margin: calculateRem(5) 0 calculateRem(43);
-  }
-
-  .footer__questions-list {
-    list-style: none;
-  }
-
-  .footer__questions-link {
-    color: $footer-black;
-    font-size: calculateRem(20);
-  }
-
-  .footer__questions-item {
-    margin-bottom: calculateRem(12);
-  }
-
-  .footer__questions-link:hover {
-    text-decoration: underline;
-  }
-
-  .footer__join-subtitle {
-    font-family: $font-family-Roboto;
-    font-size: calculateRem(24);
-    margin: calculateRem(5) 0 calculateRem(43);
-  }
-
-  .footer__join-svg {
-    &:not(:last-child) {
-      margin-right: calculateRem(18);
-    }
-    transition: 0.2s linear;
-    &:hover {
-      fill: $font-color-red;
-      transition: 0.2s linear;
-    }
-  }
-
-  .footer__news-subtitle {
-    font-family: $font-family-Roboto;
-    font-size: calculateRem(24);
-    margin: calculateRem(5) 0 calculateRem(23);
-  }
-
-  .footer__news-sale {
-    padding-bottom: calculateRem(15);
-    width: calculateRem(180);
-    line-height: 2;
+  &__box {
     
-    width: 100%;
-    & > p {
-      font-size: calculateRem(20);
+    flex-basis: 20%;
+    &--head {
+      font-family: $font-family-Roboto;
+      font-size: calculateRem(18);
+      text-transform: uppercase;
+      font-weight: 400;
+      line-height: 28px;
+    }
+    &--logo {
+      font-size: calculateRem(28);
+      font-family: "CormorantUnicase-Bold", Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+    &--item {
+      width: 70%;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    
+      &:first-child {
+        margin-bottom: calculateRem(41);
+      }
+      
+    }
+    
+    &--link, &--discr {
+      font-size: $font-size-very-small;
+      font-family: $font-family-Roboto;
+      line-height: 15px;
+      transition: .2s linear;
+    }
+    &--link:hover {
+      border-bottom: 1px solid black;
+      transition: .2s linear;
+      cursor: pointer;
+    }
+    &--btn {
+      background-color: #333333;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      &.join {
+        padding: 16px 36px;
+        border-left: 1px solid $footer-font-black;
+        transition: .2s linear;
+        font-weight: 500;
+        &:hover {
+          color: $font-color-red;
+          transition: .2s linear;
+        }
+      }
+      &.plane {
+        fill: #fff;
+        transition: .2s linear;
+        &:hover {
+          fill: $font-color-red;
+          transition: .2s linear;
+        }
+      }
     }
   }
-
-  .footer__news-sale:last-child {
-    padding-bottom: calculateRem(25);
+  
+  &__flex {
+    display: flex;
   }
-
 }
-
-.block2 {
-  background-color: #222222;
+.foo__btn {
   display: flex;
-  text-align: center;
-
-  .block2__rights {
-    color: $font-color-white;
-    padding: calculateRem(20) 0 calculateRem(22);
-    font-size: calculateRem(18);
-  }
 }
-
-.footer__news-button-plane {
-
-  padding: 15px 25px;
-  border: none;
-  border-right: 1px solid $footer-font-black;
-  background-color: $footer-black;
-  background-image: url(../img/paper-airplane-outline.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  cursor: pointer;
-
-}
-
-.footer__news-btn {
-  width: 200px;
+.footer__box:nth-child(2){
   display: flex;
-  margin: 0 auto;
-  @media (min-width: 1200px) {
-    margin: 0;
-  }
+  flex-direction: column;
+  align-items: flex-end;
 }
-
-.footer__news-button {
-  background-color: $footer-black;
-  border: none;
-  padding: 10px 35px;
-  color: $font-color-white;
-  font-size: calculateRem(24);
-  cursor: pointer;
-  &:hover {
-    color: $font-color-red;
-  }
+.footer__box:nth-child(4) > a:not(:last-child) {
+  margin-right: 20px;
 }
-@media (max-width: 768px) {
-   .footer__modifier:not(:last-child) {
-     margin-bottom: 25px;
-   } 
+.footer__box:nth-child(4) > a:hover svg{
+  fill: $font-color-red;
+  transition: .2s linear;
 }
-@media (min-width: 768px) and (max-width: 1200px) {
-    .block {
-      flex-wrap: wrap;
-    }
-    .footer__modifier {
-      width: 33%;
-    }
-}
-.footer__block1 > p{
-  font-size: calculateRem(18);
+.footer__box:nth-child(5) li > p {
+  margin-bottom: calculateRem(25);
 }
