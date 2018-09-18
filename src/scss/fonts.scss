@@ -37,3 +37,10 @@
   src: url('../fonts/CormorantUnicase-Bold.woff') format('woff'),
     url('../fonts/CormorantUnicase-Bold.woff2') format('woff2')
 }
+
+@font-face {
+  font-family: 'Roboto-light';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Roboto-Light.ttf') format('ttf'),
+}

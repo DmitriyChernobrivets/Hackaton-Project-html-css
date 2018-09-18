@@ -53,13 +53,12 @@
   }
 
   &__learn-txt {
-    font-size: calculateRem(15);
-    @media (min-width: 769px) {
-      font-size: calculateRem(18);
-    }
+    font-size: calculateRem(12);
     border-bottom: 1px solid black;
     font-family: $font-family-Roboto;
+    font-weight: 500;
     transition: .2s linear;
+    padding-top: 5px;
     &:hover {
       color: $font-color-red;
       transition: .2s linear;
@@ -75,10 +74,7 @@
     font-family: $font-family-Roboto;
     
     & > p {
-      font-size:  calculateRem(16);
-      @media (min-width: 768px) {
-        font-size: calculateRem(20);
-      }
+      font-size:  calculateRem(13);
     }
   }
 
@@ -87,10 +83,7 @@
     text-align: center;
     font-family: $font-family-Roboto;
     & > span {
-      font-size: calculateRem(16);
-      @media (min-width: 768px) {
-        font-size: calculateRem(20);
-      }
+      font-size: calculateRem(13);
     }
     >:last-child {
       border-left: 1px solid $footer-background;
@@ -101,10 +94,8 @@
   &__collection-price {
     text-align: center;
   & > span {
-    font-size: calculateRem(16);
-    @media (min-width: 768px) {
-      font-size: calculateRem(20);
-    }
+    font-size: calculateRem(13);
+   
   }
     &__red {
       color: $font-color-red;
@@ -147,12 +138,10 @@
     color: $font-color-red;
     right: calculateRem(25);
     top: calculateRem(25);
-    padding: calculateRem(35) calculateRem(20);
+    padding: calculateRem(30) calculateRem(20);
     border-radius: 50%;
     background-color: $font-color-white;
-    font-size: calculateRem(24);
-    @media (min-width: 768px) {
-      font-size: calculateRem(18);
-    }
+    font-size: calculateRem(12);
+    
   }
 }
