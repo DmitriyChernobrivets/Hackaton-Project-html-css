@@ -8,6 +8,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  
 }
 
 .content-box:not(:nth-child(n+10)) {
@@ -17,12 +18,11 @@
 .content-box {
   width: 23%;
   min-height: 100px;
-  margin: 0 auto;
 
   @media (max-width: 480px) {
-    flex-direction: column;
     margin-bottom: calculateRem(60);
     width: 60%;
+    margin: 0 auto;
   }
   @media (min-width: 769px) and (max-width:1000px) {
     width: 30%;
@@ -55,12 +55,11 @@
     font-family: $font-family-Roboto;
     font-weight: 500;
     transition: .2s linear;
-    padding-top: 5px;
     @media (min-width: 1000px) {
       font-size: calculateRem(14);
     }
     &:hover {
-      color: $font-color-red;
+      
       transition: .2s linear;
       text-decoration: underline;
 
@@ -72,33 +71,44 @@
     text-align: center;
     text-transform: uppercase;
     font-family: $font-family-Roboto;
-    
-    & > p {
-      font-size:  calculateRem(13);
+    font-size:  calculateRem(13);
       @media (min-width: 1000px) {
         font-size: calculateRem(15);
-      }
     }
   }
 
   &__collection-name {
     margin-bottom: calculateRem(15);
     text-align: center;
-    font-family: $font-family-Roboto;
-    & > span {
-      font-size: calculateRem(13);
-      @media (min-width: 1000px) {
-        font-size: calculateRem(15);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    &:after {
+      content: " ";
+      display: inline-block;
+      width: 1px;
+      background-color: black;
+      height: 15px;
+      position: absolute;
+      left: 51%;
+    }
+      & .text {
+        font-family: $font-family-Roboto;
+        font-size: calculateRem(13);
+        flex-basis: 26%;
+        @media (min-width: 1000px) {
+          font-size: calculateRem(15);
+          }
+
       }
-    }
-    >:last-child {
-      border-left: 1px solid $footer-background;
-      padding-left: calculateRem(4);
-    }
   }
 
   &__collection-price {
-    text-align: center;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  
   & > span {
     font-size: calculateRem(13);
     @media (min-width: 1000px) {
@@ -107,11 +117,12 @@
   }
     &__red {
       color: $font-color-red;
+      flex-basis: 17%;
     }
 
     &__throught {
       text-decoration: line-through;
-      margin-right: calculateRem(12);
+      flex-basis: 17%;
     }
   }
 
@@ -121,6 +132,7 @@
     background-color: $main-learn-bg;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: calculateRem(13);
     width: 100%;
     opacity: 0;
@@ -152,6 +164,3 @@
     
   }
 }
-// @media (min-width: 1000px) {
-//   font-size: 
-// }
