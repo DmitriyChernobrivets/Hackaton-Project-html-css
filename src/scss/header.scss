@@ -56,11 +56,11 @@ body {
     text-align: center;
   }
 }
-
-.menu {
+.menuWRP {
+  flex-basis: 50%;
   display: flex;
   align-items: center;
-  flex-basis: 50%;
+  justify-content: flex-start;
   @media screen and (max-width: 1200px) {
     flex-basis: 65%;
     justify-content: flex-end;
@@ -69,19 +69,28 @@ body {
     flex-basis: 100%;
     justify-content: center;
   }
+  
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 480px;
+  @media screen and (max-width: 900px) {
+    width: 416px;
+  }
   @media screen and (max-width: 500px) {
+    width: 80px;
     flex-direction: column;
   }
 
   &__item {
-    margin-right: calculateRem(40);
-    position: relative;
+    //margin-right: calculateRem(40);
     @media screen and (max-width: 900px) {
-      margin-right: calculateRem(25);
+      //margin-right: calculateRem(25);
     }
     @media screen and (max-width: 500px) {
-      flex-direction: column;
-      margin-right: calculateRem(0);
+      flex-direction: column;;
       margin-bottom: calculateRem(10);
     }
   }
@@ -94,7 +103,7 @@ body {
   }
 
   &__item--active::after {
-    content: '';
+    content: "";
     display: block;
     width: 0;
     height: 1px;
@@ -144,7 +153,7 @@ body {
   }
 
   &__link--decor::after {
-    content: '';
+    content: "";
     display: inline-block;
     width: 0;
     height: 0;
@@ -154,12 +163,35 @@ body {
     margin-left: calculateRem(14);
   }
 }
+.au-formWRP {
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
 
+  &__regLogin {
+    width: 143px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__regLogin::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    background-color: $font-color-grey;
+    position: absolute;
+    transform: translate(63px, 2px);
+  }
+}
 .au-form {
   display: flex;
   align-items: center;
   flex-basis: 25%;
   justify-content: flex-end;
+  @media screen and (min-width: 1200px) {
+    padding-right: calculateRem(7);
+  }
   @media screen and (max-width: 1200px) {
     flex-basis: 100%;
     justify-content: center;
@@ -173,28 +205,17 @@ body {
   }
 
   &__btn-login {
-    margin-right: calculateRem(10);
     display: flex;
     align-items: center;
   }
 
   &__btn-reg {
-    margin-right: calculateRem(29);
   }
 
-  &__btn-reg::before {
-    content: '';
-    display: inline-block;
-    width: 1px;
-    height: 10px;
-    background-color: $font-color-grey;
-    margin-right: calculateRem(9);
-  }
 
   &__btn-like {
     width: 16px;
     height: 15px;
-    margin-right: calculateRem(29);
   }
 
   &__btn-inbox {
@@ -262,7 +283,6 @@ body {
 }
 
 .header-bottom {
-
   &__form {
     display: flex;
 
@@ -272,11 +292,9 @@ body {
     @media (min-width: 769px) and (max-width: 1000px) {
       flex-wrap: wrap;
     }
-    
   }
 
   &__select-reset {
-
     color: $footer-font-black;
     padding-bottom: calculateRem(15);
     font-family: $font-family-Roboto;
@@ -303,11 +321,10 @@ body {
     font-family: $font-family-Roboto;
     font-size: $font-size-very-small;
     text-transform: uppercase;
-    
+
     @media (min-width: 769px) and (max-width: 1000px) {
       flex-basis: 50%;
     }
-
   }
 }
 .search-input {
