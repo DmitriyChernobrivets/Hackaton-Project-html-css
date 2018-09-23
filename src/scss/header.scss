@@ -69,7 +69,6 @@ body {
     flex-basis: 100%;
     justify-content: center;
   }
-  
 }
 .menu {
   display: flex;
@@ -85,18 +84,13 @@ body {
   }
 
   &__item {
-    //margin-right: calculateRem(40);
-    @media screen and (max-width: 900px) {
-      //margin-right: calculateRem(25);
-    }
+    position: relative;
     @media screen and (max-width: 500px) {
-      flex-direction: column;;
       margin-bottom: calculateRem(10);
     }
   }
 
   &__item:last-child {
-    margin-right: 0px;
     @media screen and (max-width: 500px) {
       margin-bottom: 0px;
     }
@@ -211,7 +205,6 @@ body {
 
   &__btn-reg {
   }
-
 
   &__btn-like {
     width: 16px;
