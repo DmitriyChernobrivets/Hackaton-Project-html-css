@@ -19,7 +19,7 @@
   width: 23%;
   min-height: 100px;
 
-  @media (max-width: 480px) {
+  @media (max-width: 500px) {
     margin-bottom: calculateRem(60);
     width: 60%;
     margin: 0 auto;
@@ -27,7 +27,7 @@
   @media (min-width: 769px) and (max-width:1000px) {
     width: 30%;
   }
-  @media (min-width: 489px) and (max-width:768px) {
+  @media (min-width: 500px) and (max-width:768px) {
     width: 45%;
   }
   &__float-btn {
@@ -83,6 +83,7 @@
     display: flex;
     justify-content: center;
     position: relative;
+    // min-width: 80%;
     &:after {
       content: " ";
       display: inline-block;
@@ -95,7 +96,7 @@
       & .text {
         font-family: $font-family-Roboto;
         font-size: calculateRem(13);
-        flex-basis: 26%;
+        flex-basis: 70px;
         @media (min-width: 1000px) {
           font-size: calculateRem(15);
           }
@@ -108,7 +109,6 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  
   & > span {
     font-size: calculateRem(13);
     @media (min-width: 1000px) {
@@ -117,12 +117,13 @@
   }
     &__red {
       color: $font-color-red;
-      flex-basis: 17%;
+      flex-basis: 50px;
+      
     }
 
     &__throught {
       text-decoration: line-through;
-      flex-basis: 17%;
+      flex-basis: 40px;
     }
   }
 

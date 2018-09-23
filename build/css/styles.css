@@ -862,9 +862,9 @@ body {
 .content-box__collection-name .text {
   font-family: "Roboto-light", Arial, sans-serif;
   font-size: 0.8125rem;
-  -webkit-flex-basis: 26%;
-  -ms-flex-preferred-size: 26%;
-  flex-basis: 26%;
+  -webkit-flex-basis: 70px;
+  -ms-flex-preferred-size: 70px;
+  flex-basis: 70px;
 }
 
 .content-box__collection-price {
@@ -885,16 +885,16 @@ body {
 
 .content-box__collection-price__red {
   color: #e73331;
-  -webkit-flex-basis: 17%;
-  -ms-flex-preferred-size: 17%;
-  flex-basis: 17%;
+  -webkit-flex-basis: 50px;
+  -ms-flex-preferred-size: 50px;
+  flex-basis: 50px;
 }
 
 .content-box__collection-price__throught {
   text-decoration: line-through;
-  -webkit-flex-basis: 17%;
-  -ms-flex-preferred-size: 17%;
-  flex-basis: 17%;
+  -webkit-flex-basis: 40px;
+  -ms-flex-preferred-size: 40px;
+  flex-basis: 40px;
 }
 
 .content-box__learn-more {
@@ -1413,13 +1413,15 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .content-box {
     margin-bottom: 3.75rem;
     width: 60%;
     margin: 0 auto;
   }
+}
 
+@media (max-width: 480px) {
   .footer_block {
     width: 80%;
     margin-bottom: 2.5rem;
@@ -1484,7 +1486,7 @@ body {
   }
 }
 
-@media (min-width: 489px) and (max-width: 768px) {
+@media (min-width: 500px) and (max-width: 768px) {
   .content-box {
     width: 45%;
   }
