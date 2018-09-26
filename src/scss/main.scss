@@ -11,14 +11,14 @@
   
 }
 
-.content-box:not(:nth-child(n+10)) {
-  margin-bottom: calculateRem(60);
+.content-box:not(:nth-child(n+9)) {
+  margin-bottom: calculateRem(40);
 
 }
 .content-box {
   width: 23%;
   min-height: 100px;
-
+  padding-bottom: calculateRem(20);
   @media (max-width: 500px) {
     margin-bottom: calculateRem(60);
     width: 60%;
@@ -83,7 +83,6 @@
     display: flex;
     justify-content: center;
     position: relative;
-    // min-width: 80%;
     &:after {
       content: " ";
       display: inline-block;

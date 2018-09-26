@@ -745,8 +745,8 @@ body {
 }
 
 .header-bottom__select-reset {
+  position: relative;
   color: #979797;
-  padding-bottom: 0.9375rem;
   font-family: "Roboto-light", Arial, sans-serif;
   font-size: 12px;
   -webkit-transition: 0.2s linear;
@@ -754,11 +754,25 @@ body {
   transition: 0.2s linear;
 }
 
-.header-bottom__select-reset:hover {
-  border-bottom: 2px solid #000000;
-  -webkit-transition: 0.2s linear;
-  -o-transition: 0.2s linear;
-  transition: 0.2s linear;
+.header-bottom__select-reset:hover::after {
+  opacity: 1;
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.header-bottom__select-reset:after {
+  position: absolute;
+  content: "";
+  opacity: 0;
+  height: 1px;
+  width: 87px;
+  background-color: #000000;
+  bottom: -5px;
+  left: 0;
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
 }
 
 .header-bottom__select {
@@ -773,7 +787,6 @@ body {
   flex-grow: 1;
   font-family: "Roboto-light", Arial, sans-serif;
   font-size: 12px;
-  text-transform: uppercase;
 }
 
 .search-input {
@@ -816,13 +829,14 @@ body {
   justify-content: space-between;
 }
 
-.content-box:not(:nth-child(n+10)) {
-  margin-bottom: 3.75rem;
+.content-box:not(:nth-child(n+9)) {
+  margin-bottom: 2.5rem;
 }
 
 .content-box {
   width: 23%;
   min-height: 100px;
+  padding-bottom: 1.25rem;
 }
 
 .content-box__float-btn {
@@ -1389,7 +1403,6 @@ body {
 
 @media screen and (max-width: 768px) {
   .logo {
-    
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;

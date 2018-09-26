@@ -288,14 +288,25 @@ body {
   }
 
   &__select-reset {
+    position: relative;
     color: $footer-font-black;
-    padding-bottom: calculateRem(15);
     font-family: $font-family-Roboto;
     font-size: $font-size-very-small;
     transition: 0.2s linear;
-    &:hover {
-      border-bottom: 2px solid $font-color-main;
-      transition: 0.2s linear;
+    &:hover::after {
+      opacity: 1;
+      transition: .2s linear;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      opacity: 0;
+      height: 1px;
+      width: 87px;
+      background-color: $font-color-main;
+      bottom: -5px;
+      left: 0;
+      transition: .2s linear;
     }
   }
 
@@ -313,7 +324,6 @@ body {
     flex-grow: 1;
     font-family: $font-family-Roboto;
     font-size: $font-size-very-small;
-    text-transform: uppercase;
 
     @media (min-width: 769px) and (max-width: 1000px) {
       flex-basis: 50%;
